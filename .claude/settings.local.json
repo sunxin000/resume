@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -L \"https://scholar.google.com/citations?user=x2aQKE4AAAAJ&hl=zh-CN\" -H \"User-Agent: Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\")",
+      "Bash(xelatex -interaction=nonstopmode resume-zh_CN.tex)",
+      "Bash(open:*)",
+      "Read(//Users/sunxin/Downloads/**)",
+      "Read(//Users/sunxin/下载/**)",
+      "Bash(scp:*)",
+      "Bash(tar -xzf /tmp/gh.tar.gz -C /tmp/)",
+      "Bash(mkdir -p ~/.local/bin)",
+      "Bash(cp /tmp/gh_2.89.0_linux_amd64/bin/gh ~/.local/bin/gh)",
+      "Bash(chmod +x ~/.local/bin/gh)",
+      "Bash(~/.local/bin/gh --version)",
+      "Bash(gh auth:*)"
+    ]
+  }
+}

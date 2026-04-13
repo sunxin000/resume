@@ -1,0 +1,208 @@
+%-------------------------
+% Academic CV - Xin Sun
+% Based on Jake's Resume template (MIT License)
+% Compiled with XeLaTeX for CJK support
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[UTF8]{ctex}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Define colors
+\definecolor{primary}{RGB}{0, 79, 144}
+\definecolor{secondary}{RGB}{100, 100, 100}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large\bfseries\color{primary}
+}{}{0em}{}[\color{primary}\titlerule \vspace{-6pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% Publication entry
+\newcommand{\pubentry}[4]{
+  \item \textbf{#1} \\
+  {\small #2} \\
+  {\small \textit{#3}\hfill #4}
+  \vspace{0pt}
+}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\noindent
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  {\Huge \textbf{孙鑫}} \; {\large Xin Sun} &
+  \small \faPhone\ (+86) 193-8968-7089 \;\; \faEnvelope\ \href{mailto:xin.sun@cripac.ia.ac.cn}{xin.sun@cripac.ia.ac.cn} \\[4pt]
+  {\small 中国科学技术大学 \; / \; 中国科学院自动化研究所} &
+  \small \faGraduationCap\ \href{https://scholar.google.com/citations?user=x2aQKE4AAAAJ}{Google Scholar} \;\; \faGithub\ \href{https://github.com/sunxin000}{GitHub}
+\end{tabular*}
+\vspace{-6pt}
+{\color{primary}\rule{\textwidth}{1.5pt}}
+
+%----------RESEARCH INTERESTS----------
+\section{研究方向}
+我的研究聚焦于\textbf{检索增强生成 (RAG)} 与\textbf{大模型智能体训练}，涵盖两个核心方向：
+\textbf{(1) RAG \& Deep Search}——构建可靠、自适应的检索增强系统，使模型知道何时、检索什么、如何检索，迈向自主深度研究智能体；
+\textbf{(2) LLM Agent Training}——通过强化学习与后训练赋予大模型智能体多轮探索、工具调用、结构化推理及环境反馈学习等能力。
+
+%----------EDUCATION----------
+\section{教育背景}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {中国科学技术大学}{合肥, 中国}
+      {控制科学与工程 \quad 在读博士（中国科学院自动化研究所联合培养）}{2022 -- 2027（预计）}
+      \resumeItemListStart
+        \resumeItem{中国科学院自动化研究所模式识别国家重点实验室 (NLPR)}
+        \resumeItem{导师：王亮 教授（IEEE Fellow）、刘强 副研究员}
+        \resumeItem{荣誉：研究生国家奖学金（2024）、中国科学技术大学一等学业奖学金（2022--2025, 连续三年）}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {上海交通大学}{上海, 中国}
+      {计算机科学与技术 \quad 工学学士}{2018 -- 2022}
+      \resumeItemListStart
+        \resumeItem{荣誉：国家励志奖学金（2019--2022）、上海交通大学学业奖学金}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%----------PUBLICATIONS----------
+\section{论文发表}
+
+\textbf{\color{primary} $\blacktriangleright$ \quad RAG, Deep Search \& Agentic RL（核心研究方向）}
+\begin{enumerate}[leftmargin=0.3in, label={[\arabic*]}]
+
+  \pubentry{KBQA-R1: Reinforcing Large Language Models for Knowledge Base Question Answering}
+  {\textbf{\underline{Xin Sun}}, Zhongqi Chen, Xing Zheng, Qiang Liu, Shu Wu, Bowen Song, Zilei Wang, Weiqiang Wang, Liang Wang}
+  {Submitted to ICML 2026 \textnormal{(CCF-A, Scores: 4/4/4/5, 全正分)}}{}
+
+  \pubentry{Divide-Then-Align: Honest Alignment based on the Knowledge Boundary of RAG}
+  {\textbf{\underline{Xin Sun}}, Jianan Xie, Zhongqi Chen, Qiang Liu, Shu Wu, Yuehe Chen, Bowen Song, Zilei Wang, Weiqiang Wang, Liang Wang}
+  {ACL 2025, Main Conference (CCF-A)}{}
+
+  \pubentry{Predict the Retrieval! Test Time Adaptation for Retrieval Augmented Generation}
+  {\textbf{\underline{Xin Sun}}, Zhongqi Chen, Qiang Liu, Shu Wu, Bowen Song, Weiqiang Wang, Zilei Wang, Liang Wang}
+  {ICASSP 2026 (CCF-B)}{}
+
+  \pubentry{ToolWeaver: Weaving Collaborative Semantics for Scalable Tool Use in Large Language Models}
+  {Bowen Fang, Qiang Liu, Yesheng Liu, Jiabing Yang, \textbf{\underline{Xin Sun}}, Shu Wu, Baole Wei, Liang Wang}
+  {ICLR 2026 (CAAI-A)}{}
+
+  \pubentry{Multimodal Adaptive Retrieval Augmented Generation through Internal Representation Learning}
+  {Ruoshuang Du, \textbf{\underline{Xin Sun}}, Qiang Liu, Bowen Song, Zhongqi Chen, Weiqiang Wang, Liang Wang}
+  {IJCNN 2026 (CCF-C)}{}
+
+\end{enumerate}
+
+\vspace{2pt}
+\textbf{\color{primary} $\blacktriangleright$ \quad 其他研究工作：图学习 \& 可信机器学习}
+\begin{enumerate}[leftmargin=0.3in, label={[\arabic*]}, resume]
+
+  \pubentry{DIVE: Subgraph Disagreement for Graph Out-of-Distribution Generalization}
+  {\textbf{\underline{Xin Sun}}, Liang Wang, Qiang Liu, Shu Wu, Zilei Wang, Liang Wang}
+  {KDD 2024 (CCF-A)}{}
+
+  \pubentry{Noise-Robust Semi-Supervised Learning for Distant Supervision Relation Extraction}
+  {\textbf{\underline{Xin Sun}}, Qiang Liu, Shu Wu, Zilei Wang, Liang Wang}
+  {EMNLP 2023, Findings (CCF-B)}{}
+
+  \pubentry{Uncertainty Calibration for Counterfactual Propensity Estimation in Recommendation}
+  {Wenbo Hu*, \textbf{\underline{Xin Sun}}*, Qiang Liu, Liang Wang}
+  {IEEE TKDE (CCF-A, SCI Q1)}{}
+
+  \pubentry{Pin-Tuning: Parameter-Efficient In-Context Tuning for Few-shot Molecular Property Prediction}
+  {Liang Wang, Qiang Liu, Shaozhen Liu, \textbf{\underline{Xin Sun}}, Shu Wu, Liang Wang}
+  {NeurIPS 2024 (CCF-A)}{}
+
+  \pubentry{GSLB: The Graph Structure Learning Benchmark}
+  {Zhixun Li, Liang Wang, \textbf{\underline{Xin Sun}}, Yifan Luo, Yanqiao Zhu, Dingshuo Chen, Yingtao Luo, Xiangxin Zhou, Qiang Liu, Shu Wu, Liang Wang, Jeffrey Xu Yu}
+  {NeurIPS 2023 (CCF-A)}{}
+
+\end{enumerate}
+
+%----------PROJECTS----------
+\section{开源项目}
+  \resumeSubHeadingListStart
+    \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{GSLB: 图结构学习评测基准} & \href{https://github.com/GSL-Benchmark/GSLB}{\faGithub\ GitHub \quad \faStar\ 103} \\
+    \end{tabular*}\vspace{-4pt}
+    \resumeItemListStart
+      \resumeItem{面向图结构学习的开源评测工具库，集成多种结构学习算法，收录大量经典模型复现代码}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%----------EXPERIENCE----------
+\section{实习经历}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {蚂蚁集团}{杭州, 中国}
+      {机器智能部门 -- 算法研究实习生}{2024.11 -- 2026.04}
+      \resumeItemListStart
+        \resumeItem{RAG 核心方向研究：主导完成多项检索增强生成相关工作，包括 RAG 可信对齐 (ACL 2025)、多模态自适应 RAG (IJCNN 2026)、RAG 测试时自适应 (ICASSP 2026)、知识库问答强化学习 KBQA-R1 (投稿 ICML 2026) 等}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {字节跳动}{北京, 中国}
+      {AML -- 机器学习工程师实习生}{2022.02 -- 2022.08}
+      \resumeItemListStart
+        \resumeItem{参与多变量时间序列自动机器学习平台的开发}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%----------SERVICE----------
+\section{学术服务}
+\begin{itemize}[leftmargin=0.15in, label={}, nosep]
+  \item \textbf{会议审稿人：} ICML 2026, NeurIPS 2025, ACL 2025, EMNLP 2025, KDD 2024
+\end{itemize}
+
+%-------------------------------------------
+\end{document}
