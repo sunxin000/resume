@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif; display: flex; flex-direction: column;
+  background: #FFFFFF;
+}
+.header { background: #1A3A5C; padding: 18pt 40pt; }
+.header h1 { color: #FFFFFF; font-size: 22pt; margin: 0; }
+.content { margin: 16pt 40pt; flex: 1; }
+.work { display: flex; flex-direction: row; margin: 10pt 0; }
+.work-card {
+  flex: 1; padding: 12pt; margin: 0 6pt; background: #F8FAFB;
+  border-top: 3pt solid #2E8B8B;
+}
+.work-card h3 { color: #1A3A5C; font-size: 11pt; margin: 0 0 4pt 0; }
+.work-card p { color: #555555; font-size: 9pt; margin: 3pt 0; }
+.venue-tag { color: #2E8B8B; font-size: 9pt; margin: 2pt 0; }
+</style>
+</head>
+<body>
+<div class="header"><h1>其他重要工作</h1></div>
+<div class="content">
+  <div class="work">
+    <div class="work-card">
+      <h3>Predict the Retrieval!</h3>
+      <p class="venue-tag"><b>ICASSP 2026 | 一作</b></p>
+      <p><b>问题：</b>RAG 中何时需要检索？</p>
+      <p><b>方法：</b>测试时自适应，利用模型内部信号动态判断</p>
+      <p><b>贡献：</b>无需额外训练的自适应检索决策</p>
+    </div>
+    <div class="work-card">
+      <h3>DIVE</h3>
+      <p class="venue-tag"><b>KDD 2024 | 一作</b></p>
+      <p><b>问题：</b>图神经网络的分布外泛化</p>
+      <p><b>方法：</b>子图不一致性学习环境不变表征</p>
+      <p><b>贡献：</b>图 OOD 泛化的新方法</p>
+    </div>
+    <div class="work-card">
+      <h3>ToolWeaver</h3>
+      <p class="venue-tag"><b>ICLR 2026 | 合作</b></p>
+      <p><b>问题：</b>LLM 面对大量工具难以选择组合</p>
+      <p><b>方法：</b>协作语义编织实现可扩展工具使用</p>
+      <p><b>贡献：</b>Agent 工具调用新范式</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

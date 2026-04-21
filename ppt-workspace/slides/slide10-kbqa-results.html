@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif; display: flex; flex-direction: column;
+  background: #FFFFFF;
+}
+.header { background: #1A3A5C; padding: 18pt 40pt; }
+.header h1 { color: #FFFFFF; font-size: 22pt; margin: 0; }
+.content { margin: 14pt 36pt; flex: 1; display: flex; flex-direction: row; }
+.left { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.right { flex: 1; margin-left: 14pt; }
+.right h2 { color: #1A3A5C; font-size: 14pt; margin: 0 0 8pt 0; }
+.right ul { margin: 0; padding: 0 0 0 14pt; }
+.right li { color: #333333; font-size: 10pt; margin: 5pt 0; line-height: 1.4; }
+.score-box {
+  background: #E8F5E9; padding: 12pt; text-align: center; margin: 8pt 0;
+}
+.score-box h3 { color: #2E7D32; font-size: 13pt; margin: 0 0 4pt 0; }
+.score-box p { color: #333333; font-size: 16pt; margin: 2pt 0; }
+.significance {
+  background: #F0F7FA; padding: 10pt; border-left: 4pt solid #2E8B8B; margin: 8pt 0;
+}
+.significance p { color: #333333; font-size: 9.5pt; margin: 3pt 0; }
+</style>
+</head>
+<body>
+<div class="header"><h1>KBQA-R1: 实验结果</h1></div>
+<div class="content">
+  <div class="left">
+    <img src="/Users/sunxin/resume/papers/01_KBQA-R1_images/x3.png" style="width: 240pt; height: auto;" />
+    <div class="score-box">
+      <h3>ICML 2026 审稿评分</h3>
+      <p><b>4 / 4 / 4 / 5</b></p>
+    </div>
+  </div>
+  <div class="right">
+    <h2>主要贡献</h2>
+    <ul>
+      <li>首次将 RL 成功应用于结构化知识推理</li>
+      <li>模型学会自主 trial-and-error 探索</li>
+      <li>端到端训练，无需中间步骤监督</li>
+      <li>多个 KBQA 数据集上取得 SOTA</li>
+    </ul>
+    <div class="significance">
+      <p><b>对 Agent 方向：</b>验证了 RL 后训练可赋予 LLM 自主使用结构化工具的能力</p>
+      <p><b>可推广性：</b>RL 范式可迁移到 API、数据库、代码执行等更多工具调用场景</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

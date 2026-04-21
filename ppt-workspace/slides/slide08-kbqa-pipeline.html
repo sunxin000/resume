@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif; display: flex; flex-direction: column;
+  background: #FFFFFF;
+}
+.header { background: #1A3A5C; padding: 16pt 40pt; }
+.header h1 { color: #FFFFFF; font-size: 22pt; margin: 0; }
+.content { margin: 10pt 24pt; flex: 1; display: flex; flex-direction: column; align-items: center; }
+.content h2 { color: #1A3A5C; font-size: 14pt; margin: 0 0 4pt 0; align-self: flex-start; }
+.bar { background: #F0F7FA; padding: 6pt 14pt; border-left: 4pt solid #1A3A5C; margin: 4pt 0; align-self: stretch; }
+.bar p { color: #333333; font-size: 9.5pt; margin: 2pt 0; }
+</style>
+</head>
+<body>
+<div class="header"><h1>KBQA-R1: 两阶段训练流程</h1></div>
+<div class="content">
+  <h2>Stage 1: Referenced Rejection Sampling → Stage 2: Reinforcement Learning</h2>
+  <img src="/Users/sunxin/resume/papers/01_KBQA-R1_images/x2.png" style="width: 530pt; height: auto;" />
+  <div class="bar">
+    <p><b>Stage 1 (SFT)：</b>用 RRS 合成高质量推理轨迹 → 监督微调冷启动策略</p>
+    <p><b>Stage 2 (RL)：</b>策略在真实 KB 环境中 rollout → GRPO 基于 outcome reward 优化</p>
+  </div>
+</div>
+</body>
+</html>

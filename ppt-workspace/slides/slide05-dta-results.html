@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif; display: flex; flex-direction: column;
+  background: #FFFFFF;
+}
+.header { background: #1A3A5C; padding: 14pt 40pt; }
+.header h1 { color: #FFFFFF; font-size: 20pt; margin: 0; }
+.content { display: flex; flex-direction: row; margin: 10pt 30pt; flex: 1; }
+.left { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.right { flex: 1; margin-left: 14pt; }
+.right h2 { color: #1A3A5C; font-size: 13pt; margin: 0 0 6pt 0; }
+.right p { color: #333333; font-size: 9.5pt; margin: 3pt 0; line-height: 1.4; }
+.train-box { background: #F0F7FA; padding: 7pt; border-left: 3pt solid #2E8B8B; margin: 5pt 0; }
+.train-box p { color: #333333; font-size: 9pt; margin: 2pt 0; }
+.result-box { background: #E8F5E9; padding: 7pt; border-left: 3pt solid #2E7D32; margin: 5pt 0; }
+.result-box p { color: #333333; font-size: 9pt; margin: 2pt 0; }
+.venue { background: #1A3A5C; padding: 6pt 10pt; margin: 6pt 0; text-align: center; }
+.venue p { color: #FFFFFF; font-size: 10pt; margin: 0; }
+</style>
+</head>
+<body>
+<div class="header"><h1>Divide-Then-Align: 训练与结果</h1></div>
+<div class="content">
+  <div class="left">
+    <img src="/Users/sunxin/resume/papers/02_Divide-Then-Align_images/x2.png" style="width: 270pt; height: auto;" />
+  </div>
+  <div class="right">
+    <h2>训练方法</h2>
+    <div class="train-box">
+      <p><b>L = L_DPO + beta * L_SFT + gamma * L_class</b></p>
+      <p><b>DPO：</b>四象限构建不同偏好对（双不知: IDK 为 chosen）</p>
+      <p><b>SFT：</b>对 chosen response 监督微调，防止 DPO 退化</p>
+      <p><b>分类辅助：</b>value head 预测查询属于哪个象限</p>
+    </div>
+    <h2>实验结果（NQ/TriviaQA/WebQ）</h2>
+    <div class="result-box">
+      <p>总体准确率比最强 baseline 提升 10-20 个百分点</p>
+      <p>Abstain F1 大幅领先（baseline 几乎为 0）</p>
+      <p>LLaMA-2-7B/13B、LLaMA-3-8B 上均有效</p>
+    </div>
+    <div class="venue"><p><b>ACL 2025 Main Conference (CCF-A)</b></p></div>
+  </div>
+</div>
+</body>
+</html>

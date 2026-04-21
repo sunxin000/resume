@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif; display: flex; flex-direction: column;
+  background: #FFFFFF;
+}
+.header { background: #1A3A5C; padding: 16pt 40pt; }
+.header h1 { color: #FFFFFF; font-size: 22pt; margin: 0; }
+.content { margin: 14pt 36pt; flex: 1; }
+.content h2 { color: #1A3A5C; font-size: 14pt; margin: 0 0 8pt 0; }
+.content p { color: #333333; font-size: 10pt; margin: 4pt 0; line-height: 1.4; }
+.tiers { display: flex; flex-direction: row; margin: 8pt 0; }
+.tier {
+  flex: 1; padding: 10pt; margin: 0 5pt; text-align: center;
+}
+.tier-high { background: #E8F5E9; border-top: 3pt solid #2E7D32; }
+.tier-mid { background: #FFF8E1; border-top: 3pt solid #F9A825; }
+.tier-low { background: #FFEBEE; border-top: 3pt solid #C62828; }
+.tier h3 { font-size: 11pt; margin: 0 0 5pt 0; }
+.tier p { color: #333333; font-size: 9pt; margin: 3pt 0; }
+.bar { background: #F0F7FA; padding: 8pt 12pt; border-left: 4pt solid #1A3A5C; margin: 10pt 0; }
+.bar p { color: #333333; font-size: 10pt; margin: 2pt 0; }
+</style>
+</head>
+<body>
+<div class="header"><h1>KBQA-R1: Relation Retrieval &amp; Confidence Gating</h1></div>
+<div class="content">
+  <h2>RRCG：用稠密检索验证 agent 提出的关系 r_agent 与 KB schema 的匹配度</h2>
+  <p>计算 r_agent 与当前实体所有邻居 schema 关系的 Sim，取 s_max，按阈值 tau_high=0.95 和 tau_low=0.3 分三档：</p>
+  <div class="tiers">
+    <div class="tier tier-high">
+      <h3>Auto-Validation</h3>
+      <p><b>s_max >= 0.95</b></p>
+      <p>高置信匹配</p>
+      <p>自动替换为最佳匹配关系 r_s* 并执行</p>
+    </div>
+    <div class="tier tier-mid">
+      <h3>Tentative Accept</h3>
+      <p><b>0.3 <= s_max < 0.95</b></p>
+      <p>暂时接受执行</p>
+      <p>返回 top-k 候选集及分数，附加不确定性提示</p>
+    </div>
+    <div class="tier tier-low">
+      <h3>Rejection</h3>
+      <p><b>s_max < 0.3</b></p>
+      <p>拒绝执行</p>
+      <p>返回完整邻居关系列表和分数的诊断信息</p>
+    </div>
+  </div>
+  <div class="bar">
+    <p><b>作用：</b>将 LLM 的 schema 幻觉控制在单步级别——高置信自动修正，中置信提示验证，低置信强制重选</p>
+  </div>
+</div>
+</body>
+</html>

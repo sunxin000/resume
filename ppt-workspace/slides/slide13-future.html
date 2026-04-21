@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif; display: flex; flex-direction: column;
+  background: #FFFFFF;
+}
+.header { background: #1A3A5C; padding: 18pt 40pt; }
+.header h1 { color: #FFFFFF; font-size: 22pt; margin: 0; }
+.content { margin: 20pt 40pt; flex: 1; display: flex; flex-direction: row; }
+.left { flex: 1; margin-right: 20pt; }
+.right { flex: 1; }
+.left h2 { color: #1A3A5C; font-size: 15pt; margin: 0 0 12pt 0; }
+.right h2 { color: #1A3A5C; font-size: 15pt; margin: 0 0 12pt 0; }
+.plan-card {
+  background: #F0F7FA; padding: 12pt; margin: 8pt 0; border-left: 4pt solid #2E8B8B;
+}
+.plan-card h3 { color: #2E8B8B; font-size: 11pt; margin: 0 0 4pt 0; }
+.plan-card p { color: #333333; font-size: 10pt; margin: 3pt 0; line-height: 1.4; }
+.vision-card {
+  background: #F8FAFB; padding: 14pt; margin: 8pt 0; border-left: 4pt solid #E76F51;
+}
+.vision-card p { color: #333333; font-size: 10pt; margin: 4pt 0; line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="header"><h1>研究规划</h1></div>
+<div class="content">
+  <div class="left">
+    <h2>短期方向</h2>
+    <div class="plan-card">
+      <h3>Deep Search Agent</h3>
+      <p>将 RAG 从单轮检索升级为多轮自主搜索</p>
+      <p>构建能自主规划搜索策略、迭代优化检索结果的深度研究智能体</p>
+    </div>
+    <div class="plan-card">
+      <h3>Agent RL at Scale</h3>
+      <p>将 KBQA-R1 的 RL 范式推广到更多工具调用和复杂决策场景</p>
+    </div>
+  </div>
+  <div class="right">
+    <h2>长期愿景</h2>
+    <div class="vision-card">
+      <p><b>自主知识获取与推理系统</b></p>
+      <p>模型不仅能调用工具，还能自主决定学习策略，在开放环境中持续进化</p>
+    </div>
+    <div class="vision-card">
+      <p><b>RL for LLM Agent 方法论</b></p>
+      <p>探索 RL 在大模型智能体后训练中的系统性方法论，从单任务到多任务、从单工具到工具组合</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

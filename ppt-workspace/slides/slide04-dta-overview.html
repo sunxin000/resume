@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif; display: flex; flex-direction: column;
+  background: #FFFFFF;
+}
+.header { background: #1A3A5C; padding: 14pt 40pt; }
+.header h1 { color: #FFFFFF; font-size: 20pt; margin: 0; }
+.header p { color: #8BCACA; font-size: 11pt; margin: 3pt 0 0 0; }
+.content { display: flex; flex-direction: row; margin: 12pt 30pt; flex: 1; }
+.left { flex: 1; margin-right: 12pt; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.right { flex: 1; }
+.right h2 { color: #1A3A5C; font-size: 13pt; margin: 0 0 6pt 0; }
+.right p { color: #333333; font-size: 9.5pt; margin: 3pt 0; line-height: 1.4; }
+.method-box { background: #F0F7FA; padding: 8pt; border-left: 3pt solid #2E8B8B; margin: 6pt 0; }
+.method-box p { color: #333333; font-size: 9pt; margin: 2pt 0; }
+.result-box { background: #E8F5E9; padding: 8pt; border-left: 3pt solid #2E7D32; margin: 6pt 0; }
+.result-box p { color: #333333; font-size: 9pt; margin: 2pt 0; }
+.venue { background: #1A3A5C; padding: 6pt 10pt; margin: 6pt 0; text-align: center; }
+.venue p { color: #FFFFFF; font-size: 10pt; margin: 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Divide-Then-Align (ACL 2025 Main)</h1>
+  <p>Honest Alignment based on the Knowledge Boundary of RAG</p>
+</div>
+<div class="content">
+  <div class="left">
+    <img src="/Users/sunxin/resume/papers/02_Divide-Then-Align_images/x1.png" style="width: 220pt; height: auto;" />
+    <img src="/Users/sunxin/resume/papers/02_Divide-Then-Align_images/x2.png" style="width: 260pt; height: auto; margin-top: 8pt;" />
+  </div>
+  <div class="right">
+    <h2>问题</h2>
+    <p>RAG 系统中，检索知识与模型内部知识冲突时应该相信谁？缺乏知识边界感知。</p>
+    <div class="method-box">
+      <p><b>Divide：</b>利用模型内部表征划分知识象限</p>
+      <p><b>Align：</b>已知→信内部 | 未知→信检索 | 不可靠→诚实拒答</p>
+    </div>
+    <h2>结果</h2>
+    <div class="result-box">
+      <p>多个 QA 基准上同时提升准确率与校准度</p>
+      <p>无需额外判别模型，模型学会说"我不知道"</p>
+    </div>
+    <div class="venue"><p><b>ACL 2025 Main Conference (CCF-A)</b></p></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif; display: flex; flex-direction: column;
+  background: #FFFFFF;
+}
+.header { background: #1A3A5C; padding: 16pt 40pt; }
+.header h1 { color: #FFFFFF; font-size: 22pt; margin: 0; }
+.content { margin: 14pt 36pt; flex: 1; display: flex; flex-direction: row; }
+.left { flex: 1; margin-right: 16pt; }
+.right { flex: 1; }
+h2 { color: #1A3A5C; font-size: 14pt; margin: 0 0 8pt 0; }
+p { color: #333333; font-size: 10pt; margin: 4pt 0; line-height: 1.4; }
+.formula { background: #F8FAFB; padding: 8pt 12pt; margin: 6pt 0; text-align: center; }
+.formula p { color: #1A3A5C; font-size: 10pt; margin: 2pt 0; }
+.box { background: #F0F7FA; padding: 8pt 12pt; border-left: 3pt solid #2E8B8B; margin: 6pt 0; }
+.box p { color: #333333; font-size: 9.5pt; margin: 3pt 0; }
+.adv { background: #E8F5E9; padding: 8pt 12pt; border-left: 3pt solid #2E7D32; margin: 6pt 0; }
+.adv p { color: #333333; font-size: 9.5pt; margin: 3pt 0; }
+</style>
+</head>
+<body>
+<div class="header"><h1>KBQA-R1: RL 优化 (GRPO)</h1></div>
+<div class="content">
+  <div class="left">
+    <h2>奖励设计</h2>
+    <div class="box">
+      <p><b>r_outcome：</b>预测答案与 gold 的 F1 Score</p>
+    </div>
+    <div class="box">
+      <p><b>r_format：</b>tag 完整性和正确顺序</p>
+      <p>仅在 r_outcome > 0 时生效，防止"格式对答案错"获奖</p>
+    </div>
+    <div class="formula">
+      <p><b>R = 1.0*r_outcome + 0.1*I[r_outcome>0]*r_format</b></p>
+    </div>
+    <h2>GRPO Advantage</h2>
+    <div class="box">
+      <p>每个 prompt 采样 n=5 条轨迹</p>
+      <p><b>A_i = r_i - mean(r_1...r_n)</b></p>
+      <p>无需学习 value network，低方差</p>
+    </div>
+  </div>
+  <div class="right">
+    <h2>vs KBQA-o1 (MCTS)</h2>
+    <div class="adv">
+      <p><b>推理效率：</b></p>
+      <p>KBQA-o1: 28.8-78.0 次 LLM 调用/问题</p>
+      <p>KBQA-R1: 2.65-3.16 次（减少 80%+）</p>
+      <p><b>吞吐量：</b></p>
+      <p>GrailQA: 155.6 vs 5.9 问题/分钟（26x）</p>
+      <p><b>架构：</b></p>
+      <p>无需独立 reward model</p>
+      <p>无需测试时搜索</p>
+      <p>单一策略端到端</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

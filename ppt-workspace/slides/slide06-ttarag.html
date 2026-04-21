@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif; display: flex; flex-direction: column;
+  background: #FFFFFF;
+}
+.header { background: #1A3A5C; padding: 14pt 40pt; }
+.header h1 { color: #FFFFFF; font-size: 20pt; margin: 0; }
+.header p { color: #8BCACA; font-size: 11pt; margin: 3pt 0 0 0; }
+.content { display: flex; flex-direction: row; margin: 12pt 30pt; flex: 1; }
+.left { flex: 5; margin-right: 14pt; }
+.right { flex: 4; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.left h2 { color: #1A3A5C; font-size: 13pt; margin: 0 0 6pt 0; }
+.left p { color: #333333; font-size: 9.5pt; margin: 3pt 0; line-height: 1.4; }
+.method-box { background: #F0F7FA; padding: 7pt; border-left: 3pt solid #2E8B8B; margin: 5pt 0; }
+.method-box p { color: #333333; font-size: 9pt; margin: 2pt 0; }
+.result-box { background: #E8F5E9; padding: 7pt; border-left: 3pt solid #2E7D32; margin: 5pt 0; }
+.result-box p { color: #333333; font-size: 9pt; margin: 2pt 0; }
+.venue { background: #1A3A5C; padding: 6pt 10pt; margin: 5pt 0; text-align: center; }
+.venue p { color: #FFFFFF; font-size: 10pt; margin: 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>TTARAG: Predict the Retrieval! (ICASSP 2026)</h1>
+  <p>Test Time Adaptation for Retrieval Augmented Generation</p>
+</div>
+<div class="content">
+  <div class="left">
+    <h2>问题：RAG 在专业领域的分布偏移</h2>
+    <p>RAG 系统在通用领域有效，但面对专业领域（金融、医疗等）的分布偏移时泛化性能下降。</p>
+    <div class="method-box">
+      <p><b>TTARAG 方法：</b>推理时自监督域适应</p>
+      <p>1. 将检索 passages 按标点切分为 prefix-suffix 对</p>
+      <p>2. 自监督目标：给定 query+prefix，预测 suffix</p>
+      <p>3. L = -sum log P(suffix | prefix, query; theta)</p>
+      <p>4. 用 AdamW 更新全部参数（仅 3 对即可）</p>
+      <p>5. 用适应后的模型生成最终答案</p>
+    </div>
+    <div class="result-box">
+      <p><b>CRAG（5 领域）+ 医疗（BioASQ/PubMedQA）</b></p>
+      <p>24 个设置中 19 个最佳；医疗领域最高 +25.0%</p>
+      <p>LLaMA-3.1-8B / LLaMA-2-7B / ChatGLM-3-6B</p>
+    </div>
+    <div class="venue"><p><b>ICASSP 2026 (CCF-B) | 一作</b></p></div>
+  </div>
+  <div class="right">
+    <img src="/Users/sunxin/resume/papers/03_Predict-the-Retrieval_images/x1.png" style="width: 230pt; height: auto;" />
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif; display: flex; flex-direction: column;
+  background: #FFFFFF;
+}
+.header { background: #1A3A5C; padding: 16pt 40pt; }
+.header h1 { color: #FFFFFF; font-size: 22pt; margin: 0; }
+.content { margin: 14pt 36pt; flex: 1; }
+.content h2 { color: #1A3A5C; font-size: 14pt; margin: 0 0 8pt 0; }
+.content p { color: #333333; font-size: 10pt; margin: 4pt 0; line-height: 1.4; }
+.step-row { display: flex; flex-direction: row; margin: 6pt 0; }
+.step-num {
+  width: 28pt; height: 28pt; background: #2E8B8B; color: #FFFFFF; font-size: 14pt;
+  display: flex; align-items: center; justify-content: center; margin-right: 10pt;
+}
+.step-num p { color: #FFFFFF; font-size: 14pt; margin: 0; }
+.step-text { flex: 1; display: flex; align-items: center; }
+.step-text p { color: #333333; font-size: 10pt; margin: 0; }
+.problem { background: #FFF3E6; padding: 8pt 12pt; border-left: 4pt solid #E76F51; margin: 8pt 0; }
+.problem p { color: #333333; font-size: 9.5pt; margin: 2pt 0; }
+.insight { background: #E8F5E9; padding: 8pt 12pt; border-left: 4pt solid #2E7D32; margin: 8pt 0; }
+.insight p { color: #333333; font-size: 9.5pt; margin: 2pt 0; }
+</style>
+</head>
+<body>
+<div class="header"><h1>KBQA-R1: Referenced Rejection Sampling (RRS)</h1></div>
+<div class="content">
+  <div class="problem">
+    <p><b>Cold Start 问题：</b>标准 RS 接受率仅约 39%（需生成合法 S-Expression + schema 一致的关系 + 多跳路径），RRS 通过 gold 动作引导提升至 51%-67%</p>
+  </div>
+  <h2>RRS 四步流程（用 Qwen-2.5-72B 生成，蒸馏到 Llama-3.1-8B）</h2>
+  <div class="step-row">
+    <div class="step-num"><p><b>1</b></p></div>
+    <div class="step-text"><p><b>Action Extraction：</b>从 gold S-Expression 解析出 ground-truth 动作序列</p></div>
+  </div>
+  <div class="step-row">
+    <div class="step-num"><p><b>2</b></p></div>
+    <div class="step-text"><p><b>Referenced Rollout：</b>每步 prompt 包含下一个 GT 动作作为参考，生成推理轨迹</p></div>
+  </div>
+  <div class="step-row">
+    <div class="step-num"><p><b>3</b></p></div>
+    <div class="step-text"><p><b>Trajectory Filtering：</b>保留 F1(预测, gold) >= tau 且格式正确的轨迹</p></div>
+  </div>
+  <div class="step-row">
+    <div class="step-num"><p><b>4</b></p></div>
+    <div class="step-text"><p><b>Reference Stripping：</b>去除所有参考提示，SFT 只在 think/action token 上计算 loss</p></div>
+  </div>
+  <div class="insight">
+    <p><b>核心：</b>模型被迫解释"为什么"每个动作正确（而非事后编造），且通过观察真实 KB 反馈内化动作-观察对应关系</p>
+  </div>
+</div>
+</body>
+</html>

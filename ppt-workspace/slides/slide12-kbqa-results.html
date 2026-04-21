@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif; display: flex; flex-direction: column;
+  background: #FFFFFF;
+}
+.header { background: #1A3A5C; padding: 14pt 40pt; }
+.header h1 { color: #FFFFFF; font-size: 20pt; margin: 0; }
+.content { margin: 8pt 28pt; flex: 1; display: flex; flex-direction: row; }
+.col { flex: 1; display: flex; flex-direction: column; align-items: center; margin: 0 6pt; }
+h2 { color: #1A3A5C; font-size: 11pt; margin: 0 0 4pt 0; }
+.caption p { color: #555555; font-size: 8pt; margin: 1pt 0; text-align: center; }
+.results-box { background: #E8F5E9; padding: 6pt; margin: 4pt 0; text-align: center; }
+.results-box p { color: #333333; font-size: 9pt; margin: 2pt 0; }
+.results-box h3 { color: #2E7D32; font-size: 10pt; margin: 0 0 2pt 0; }
+</style>
+</head>
+<body>
+<div class="header"><h1>KBQA-R1: 实验结果 — 三数据集 SOTA（Llama-3.1-8B）</h1></div>
+<div class="content">
+  <div class="col">
+    <h2>Overall F1</h2>
+    <img src="/Users/sunxin/resume/papers/01_KBQA-R1_images/x3.png" style="width: 180pt; height: auto;" />
+    <div class="results-box">
+      <p><b>GrailQA: 86.1</b> (+7.6 vs o1)</p>
+      <p><b>WebQSP: 83.4</b> (+25.6 vs o1)</p>
+      <p><b>GraphQ: 53.8</b> (+5.1 vs o1)</p>
+    </div>
+  </div>
+  <div class="col">
+    <h2>Per-Action Accuracy</h2>
+    <img src="/Users/sunxin/resume/papers/01_KBQA-R1_images/x4.png" style="width: 180pt; height: auto;" />
+    <div class="caption"><p>JOIN/AND/CMP/TC/COUNT/ARG 各动作全面领先</p></div>
+  </div>
+  <div class="col">
+    <h2>Training Curve</h2>
+    <img src="/Users/sunxin/resume/papers/01_KBQA-R1_images/x6.png" style="width: 190pt; height: auto;" />
+    <div class="results-box">
+      <h3>ICML 2026</h3>
+      <p><b>4 / 4 / 4 / 5</b></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

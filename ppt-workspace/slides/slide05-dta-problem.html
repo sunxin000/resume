@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif; display: flex; flex-direction: column;
+  background: #FFFFFF;
+}
+.header { background: #1A3A5C; padding: 18pt 40pt; }
+.header h1 { color: #FFFFFF; font-size: 22pt; margin: 0; }
+.header p { color: #8BCACA; font-size: 12pt; margin: 4pt 0 0 0; }
+.content { display: flex; flex-direction: row; margin: 16pt 40pt; flex: 1; }
+.left { flex: 1; margin-right: 16pt; }
+.right { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.left h2 { color: #1A3A5C; font-size: 15pt; margin: 0 0 10pt 0; }
+.left p { color: #333333; font-size: 10.5pt; margin: 5pt 0; line-height: 1.4; }
+.problem-box {
+  background: #FFF3E6; padding: 10pt; border-left: 4pt solid #E76F51; margin: 8pt 0;
+}
+.problem-box p { color: #333333; font-size: 9.5pt; margin: 3pt 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Divide-Then-Align (ACL 2025)</h1>
+  <p>Honest Alignment based on the Knowledge Boundary of RAG</p>
+</div>
+<div class="content">
+  <div class="left">
+    <h2>问题背景</h2>
+    <p>RAG 系统核心矛盾：检索知识与模型内部知识冲突时，应该相信谁？</p>
+    <div class="problem-box">
+      <p><b>现有方法的不足：</b></p>
+      <p>盲目信任检索 → 被错误信息误导</p>
+      <p>完全依赖参数 → 无法利用新信息</p>
+      <p>缺乏边界感知 → 不知何时拒答</p>
+    </div>
+  </div>
+  <div class="right">
+    <img src="/Users/sunxin/resume/papers/02_Divide-Then-Align_images/x1.png" style="width: 240pt; height: auto;" />
+  </div>
+</div>
+</body>
+</html>

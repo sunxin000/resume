@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif; display: flex; flex-direction: column;
+  background: #FFFFFF;
+}
+.header { background: #1A3A5C; padding: 18pt 40pt; }
+.header h1 { color: #FFFFFF; font-size: 24pt; margin: 0; }
+.content { display: flex; flex-direction: row; margin: 25pt 40pt; flex: 1; }
+.col {
+  flex: 1; padding: 20pt; margin: 0 10pt; background: #F8FAFB;
+  border-top: 4pt solid #2E8B8B;
+}
+.col h2 { color: #1A3A5C; font-size: 15pt; margin: 0 0 12pt 0; }
+.col ul { margin: 0; padding: 0 0 0 14pt; }
+.col li { color: #444444; font-size: 10pt; margin: 6pt 0; line-height: 1.4; }
+.col-right { border-top-color: #E76F51; }
+</style>
+</head>
+<body>
+<div class="header"><h1>研究方向概览</h1></div>
+<div class="content">
+  <div class="col">
+    <h2>RAG &amp; Deep Search</h2>
+    <ul>
+      <li>何时检索？检索什么？如何检索？</li>
+      <li>RAG 可信对齐 — 知识边界感知</li>
+      <li>自适应检索决策 — 测试时自适应</li>
+      <li>多模态 RAG — 跨模态检索增强</li>
+      <li>目标：自主深度研究智能体</li>
+    </ul>
+  </div>
+  <div class="col col-right">
+    <h2>LLM Agent Training</h2>
+    <ul>
+      <li>强化学习驱动的工具调用学习</li>
+      <li>多轮交互式推理与探索</li>
+      <li>结构化知识库问答（KBQA）</li>
+      <li>可扩展的工具使用（ToolWeaver）</li>
+      <li>目标：自主决策的 LLM Agent</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif; display: flex; flex-direction: column;
+  background: #FFFFFF;
+}
+.header { background: #1A3A5C; padding: 14pt 40pt; }
+.header h1 { color: #FFFFFF; font-size: 20pt; margin: 0; }
+.header p { color: #8BCACA; font-size: 11pt; margin: 3pt 0 0 0; }
+.content { display: flex; flex-direction: row; margin: 12pt 30pt; flex: 1; }
+.left { flex: 1; margin-right: 14pt; }
+.right { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.left h2 { color: #1A3A5C; font-size: 14pt; margin: 0 0 6pt 0; }
+.left p { color: #333333; font-size: 10pt; margin: 4pt 0; line-height: 1.4; }
+.problem-box {
+  background: #FFF3E6; padding: 8pt; border-left: 4pt solid #E76F51; margin: 6pt 0;
+}
+.problem-box p { color: #333333; font-size: 9.5pt; margin: 3pt 0; }
+.method-box { background: #F0F7FA; padding: 8pt; border-left: 4pt solid #2E8B8B; margin: 6pt 0; }
+.method-box p { color: #333333; font-size: 9pt; margin: 3pt 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Divide-Then-Align (ACL 2025)</h1>
+  <p>Honest Alignment based on the Knowledge Boundary of RAG</p>
+</div>
+<div class="content">
+  <div class="left">
+    <h2>问题：RAG 不知何时该拒答</h2>
+    <p>RAFT 等方法即使检索全是噪声、模型自身也不具备知识时，仍强行生成答案，无法回答"I don't know"。这在医疗、法律等高风险场景极其危险。</p>
+    <div class="problem-box">
+      <p>现有工作要么只考虑模型参数知识边界，要么只考虑检索知识边界，从未同时考虑两者。</p>
+    </div>
+    <h2>核心思路：四象限知识边界</h2>
+    <div class="method-box">
+      <p><b>KB_param：</b>模型无检索时能正确回答的查询集合</p>
+      <p><b>KB_r：</b>检索段落中包含正确答案的查询集合</p>
+      <p><b>KB_rag = KB_param U KB_r</b></p>
+      <p>四象限：双知 / 仅参数知 / 仅检索知 / 双不知(→IDK)</p>
+    </div>
+  </div>
+  <div class="right">
+    <img src="/Users/sunxin/resume/papers/02_Divide-Then-Align_images/x1.png" style="width: 220pt; height: auto;" />
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif; display: flex; flex-direction: column;
+  background: #FFFFFF;
+}
+.header { background: #1A3A5C; padding: 18pt 40pt; }
+.header h1 { color: #FFFFFF; font-size: 22pt; margin: 0; }
+.header p { color: #8BCACA; font-size: 12pt; margin: 4pt 0 0 0; }
+.content { display: flex; flex-direction: row; margin: 20pt 40pt; flex: 1; }
+.left { flex: 3; margin-right: 20pt; }
+.right { flex: 2; display: flex; flex-direction: column; justify-content: center; }
+.left h2 { color: #1A3A5C; font-size: 16pt; margin: 0 0 12pt 0; }
+.left p { color: #333333; font-size: 11pt; margin: 6pt 0; line-height: 1.5; }
+.problem-box {
+  background: #FFF3E6; padding: 14pt; border-left: 4pt solid #E76F51; margin: 10pt 0;
+}
+.problem-box p { color: #333333; font-size: 10pt; margin: 4pt 0; }
+.pipeline-box {
+  background: #F8FAFB; padding: 14pt; text-align: center;
+}
+.pipeline-box p { color: #555555; font-size: 10pt; margin: 5pt 0; }
+.pipeline-box h3 { color: #E76F51; font-size: 12pt; margin: 0 0 8pt 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>KBQA-R1 (ICML 2026 投稿)</h1>
+  <p>Reinforcing LLMs for Knowledge Base Question Answering</p>
+</div>
+<div class="content">
+  <div class="left">
+    <h2>问题背景</h2>
+    <p>知识库问答（KBQA）要求模型在结构化知识图谱上进行多跳推理，找到最终答案。</p>
+    <div class="problem-box">
+      <p><b>传统方法的问题：</b></p>
+      <p>依赖复杂 pipeline（实体链接 → 关系匹配 → 查询生成）</p>
+      <p>各组件误差累积，难以端到端优化</p>
+      <p>LLM 缺乏有效的结构化推理训练范式</p>
+    </div>
+  </div>
+  <div class="right">
+    <div class="pipeline-box">
+      <h3>传统 Pipeline 方法</h3>
+      <p>实体链接</p>
+      <p>↓</p>
+      <p>关系匹配</p>
+      <p>↓</p>
+      <p>查询生成</p>
+      <p>↓</p>
+      <p>答案检索</p>
+      <p><b>误差逐级累积!</b></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif; display: flex; flex-direction: column;
+  background: #FFFFFF;
+}
+.header {
+  background: #1A3A5C; padding: 18pt 40pt; margin: 0;
+}
+.header h1 { color: #FFFFFF; font-size: 24pt; margin: 0; }
+.content {
+  display: flex; flex-direction: row; margin: 20pt 40pt; flex: 1;
+}
+.left { flex: 1; margin-right: 20pt; }
+.right { flex: 1; }
+.left h2 { color: #1A3A5C; font-size: 16pt; margin: 0 0 10pt 0; }
+.left p { color: #333333; font-size: 11pt; margin: 4pt 0; line-height: 1.5; }
+.right h2 { color: #1A3A5C; font-size: 16pt; margin: 0 0 10pt 0; }
+.card {
+  background: #F0F7FA; padding: 12pt; margin: 8pt 0; border-left: 4pt solid #2E8B8B;
+}
+.card p { color: #333333; font-size: 10pt; margin: 3pt 0; }
+.card h3 { color: #2E8B8B; font-size: 11pt; margin: 0 0 4pt 0; }
+</style>
+</head>
+<body>
+<div class="header"><h1>个人简介</h1></div>
+<div class="content">
+  <div class="left">
+    <h2>教育背景</h2>
+    <p><b>博士</b>（2022-2027）中国科学技术大学</p>
+    <p>控制科学与工程，中科院自动化所 NLPR 联合培养</p>
+    <p><b>本科</b>（2018-2022）上海交通大学</p>
+    <p>计算机科学与技术</p>
+    <h2>荣誉奖项</h2>
+    <p>研究生国家奖学金（2024）</p>
+    <p>一等学业奖学金（2022-2025，连续三年）</p>
+    <p>国家励志奖学金（2019-2022）</p>
+  </div>
+  <div class="right">
+    <h2>研究方向</h2>
+    <div class="card">
+      <h3>RAG &amp; Deep Search</h3>
+      <p>构建可靠、自适应的检索增强系统，迈向自主深度研究智能体</p>
+    </div>
+    <div class="card">
+      <h3>LLM Agent Training</h3>
+      <p>通过 RL 后训练赋予 LLM 多轮探索、工具调用、环境反馈学习能力</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
