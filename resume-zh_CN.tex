@@ -93,6 +93,7 @@
 我的研究聚焦于\textbf{检索增强生成 (RAG)} 与\textbf{大模型智能体训练}，涵盖两个核心方向：
 \textbf{(1) RAG \& Deep Search}——构建可靠、自适应的检索增强系统，使模型知道何时、检索什么、如何检索，迈向自主深度研究智能体；
 \textbf{(2) LLM Agent Training}——通过强化学习与后训练赋予大模型智能体多轮探索、工具调用、结构化推理及环境反馈学习等能力。
+博士期间已发表\textbf{5 篇一作论文}，另有 1 篇一作论文在投 ICML 2026（审稿全正分 4/4/4/5）。
 
 %----------EDUCATION----------
 \section{教育背景}
@@ -123,22 +124,27 @@
   \pubentry{KBQA-R1: Reinforcing Large Language Models for Knowledge Base Question Answering}
   {\textbf{\underline{Xin Sun}}, Zhongqi Chen, Xing Zheng, Qiang Liu, Shu Wu, Bowen Song, Zilei Wang, Weiqiang Wang, Liang Wang}
   {Submitted to ICML 2026 \textnormal{(CCF-A, Scores: 4/4/4/5, 全正分)}}{}
+  {\small\color{secondary} 将知识库问答建模为多轮 MDP，模型在与 KB 的闭环交互中基于环境反馈自适应调整推理策略；提出 RRS 解决 RL 冷启动，通过 GRPO 以 outcome-based reward 优化策略，三个基准均达 SOTA，推理效率较 MCTS 方法提升 26 倍。}
 
   \pubentry{Divide-Then-Align: Honest Alignment based on the Knowledge Boundary of RAG}
   {\textbf{\underline{Xin Sun}}, Jianan Xie, Zhongqi Chen, Qiang Liu, Shu Wu, Yuehe Chen, Bowen Song, Zilei Wang, Weiqiang Wang, Liang Wang}
   {ACL 2025, Main Conference (CCF-A)}{}
+  {\small\color{secondary} 定义 RAG 的四象限知识边界（参数知识 $\cup$ 检索知识），为各象限构造差异化偏好数据，通过 DPO+SFT+分类辅助多目标训练实现诚实对齐，使模型学会在知识不足时拒答。}
 
   \pubentry{Predict the Retrieval! Test Time Adaptation for Retrieval Augmented Generation}
   {\textbf{\underline{Xin Sun}}, Zhongqi Chen, Qiang Liu, Shu Wu, Bowen Song, Weiqiang Wang, Zilei Wang, Liang Wang}
   {ICASSP 2026 (CCF-B)}{}
+  {\small\color{secondary} 将检索文档拆分为 prefix-suffix 对构造自监督目标，在推理时动态更新模型参数以适应目标领域，无需标注数据即可显著提升 RAG 在专业领域的性能。}
 
   \pubentry{ToolWeaver: Weaving Collaborative Semantics for Scalable Tool Use in Large Language Models}
   {Bowen Fang, Qiang Liu, Yesheng Liu, Jiabing Yang, \textbf{\underline{Xin Sun}}, Shu Wu, Baole Wei, Liang Wang}
   {ICLR 2026 (CAAI-A)}{}
+  {\small\color{secondary} 通过协作语义编织实现 LLM 面对大规模工具集时的可扩展工具选择与组合。}
 
   \pubentry{Multimodal Adaptive Retrieval Augmented Generation through Internal Representation Learning}
   {Ruoshuang Du, \textbf{\underline{Xin Sun}}, Qiang Liu, Bowen Song, Zhongqi Chen, Weiqiang Wang, Liang Wang}
   {IJCNN 2026 (CCF-C)}{}
+  {\small\color{secondary} 通过内部表征学习实现多模态场景下的自适应检索增强生成。}
 
 \end{enumerate}
 
@@ -149,22 +155,27 @@
   \pubentry{DIVE: Subgraph Disagreement for Graph Out-of-Distribution Generalization}
   {\textbf{\underline{Xin Sun}}, Liang Wang, Qiang Liu, Shu Wu, Zilei Wang, Liang Wang}
   {KDD 2024 (CCF-A)}{}
+  {\small\color{secondary} 通过子图不一致性学习环境不变的图表征，解决图神经网络在分布外数据上的泛化问题。}
 
   \pubentry{Noise-Robust Semi-Supervised Learning for Distant Supervision Relation Extraction}
   {\textbf{\underline{Xin Sun}}, Qiang Liu, Shu Wu, Zilei Wang, Liang Wang}
   {EMNLP 2023, Findings (CCF-B)}{}
+  {\small\color{secondary} 利用噪声鲁棒的半监督学习方法改进远程监督关系抽取中的噪声标签问题。}
 
   \pubentry{Uncertainty Calibration for Counterfactual Propensity Estimation in Recommendation}
   {Wenbo Hu*, \textbf{\underline{Xin Sun}}*, Qiang Liu, Liang Wang}
   {IEEE TKDE (CCF-A, SCI Q1)}{}
+  {\small\color{secondary} 通过不确定性校准改进反事实倾向估计，提升推荐系统转化率预估的准确性与鲁棒性。}
 
   \pubentry{Pin-Tuning: Parameter-Efficient In-Context Tuning for Few-shot Molecular Property Prediction}
   {Liang Wang, Qiang Liu, Shaozhen Liu, \textbf{\underline{Xin Sun}}, Shu Wu, Liang Wang}
   {NeurIPS 2024 (CCF-A)}{}
+  {\small\color{secondary} 面向小样本分子属性预测的参数高效上下文微调方法。}
 
   \pubentry{GSLB: The Graph Structure Learning Benchmark}
   {Zhixun Li, Liang Wang, \textbf{\underline{Xin Sun}}, Yifan Luo, Yanqiao Zhu, Dingshuo Chen, Yingtao Luo, Xiangxin Zhou, Qiang Liu, Shu Wu, Liang Wang, Jeffrey Xu Yu}
   {NeurIPS 2023 (CCF-A)}{}
+  {\small\color{secondary} 首个综合性图结构学习评测基准，集成 16 种 GSL 算法和 20 种图数据集。}
 
 \end{enumerate}
 
@@ -195,6 +206,7 @@
       {AML -- 机器学习工程师实习生}{2022.02 -- 2022.08}
       \resumeItemListStart
         \resumeItem{参与多变量时间序列自动机器学习平台的开发}
+        \resumeItem{推荐系统因果推断研究：提出反事实倾向估计的不确定性校准方法，发表于 IEEE TKDE (CCF-A)}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
