@@ -1,0 +1,161 @@
+\begin{thebibliography}{10}
+
+\bibitem{izacard2021leveraging}
+Gautier Izacard and Edouard Grave,
+\newblock ``Leveraging passage retrieval with generative models for open domain question answering,''
+\newblock in {\em EACL 2021}, Online, 2021, pp. 874--880, Association for Computational Linguistics.
+
+\bibitem{lewis2020retrieval}
+Patrick S.~H. Lewis, Ethan Perez, et~al.,
+\newblock ``Retrieval-augmented generation for knowledge-intensive {NLP} tasks,''
+\newblock in {\em NeurIPS 2020}, Hugo Larochelle, Marc'Aurelio Ranzato, Raia Hadsell, Maria{-}Florina Balcan, and Hsuan{-}Tien Lin, Eds., 2020.
+
+\bibitem{edge2024local}
+Darren Edge, Ha~Trinh, Newman Cheng, Joshua Bradley, Alex Chao, Apurva Mody, Steven Truitt, and Jonathan Larson,
+\newblock ``From local to global: A graph rag approach to query-focused summarization,''
+\newblock {\em arXiv preprint arXiv:2404.16130}, 2024.
+
+\bibitem{radford2019language}
+Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, Ilya Sutskever, et~al.,
+\newblock ``Language models are unsupervised multitask learners,''
+\newblock {\em OpenAI blog}, vol. 1, no. 8, pp. 9, 2019.
+
+\bibitem{brown2020language}
+Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared~D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et~al.,
+\newblock ``Language models are few-shot learners,''
+\newblock {\em Advances in neural information processing systems}, vol. 33, pp. 1877--1901, 2020.
+
+\bibitem{bubeck2023sparks}
+S{\'e}bastien Bubeck, Varun Chandrasekaran, Ronen Eldan, Johannes Gehrke, Eric Horvitz, Ece Kamar, Peter Lee, Yin~Tat Lee, Yuanzhi Li, Scott Lundberg, et~al.,
+\newblock ``Sparks of artificial general intelligence: Early experiments with gpt-4,''
+\newblock {\em arXiv preprint arXiv:2303.12712}, 2023.
+
+\bibitem{pasca-2019-wikipedia}
+Marius Pasca,
+\newblock ``{W}ikipedia as a resource for text analysis and retrieval,''
+\newblock in {\em Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics: Tutorial Abstracts}, Preslav Nakov and Alexis Palmer, Eds., Florence, Italy, July 2019, p.~24, Association for Computational Linguistics.
+
+\bibitem{bollacker2008freebase}
+Kurt Bollacker, Colin Evans, Praveen Paritosh, Tim Sturge, and Jamie Taylor,
+\newblock ``Freebase: a collaboratively created graph database for structuring human knowledge,''
+\newblock in {\em Proceedings of the 2008 ACM SIGMOD international conference on Management of data}, 2008, pp. 1247--1250.
+
+\bibitem{jin2019pubmedqa}
+Qiao Jin, Bhuwan Dhingra, Zhengping Liu, William Cohen, and Xinghua Lu,
+\newblock ``{P}ub{M}ed{QA}: A dataset for biomedical research question answering,''
+\newblock in {\em Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)}, Hong Kong, China, 2019, pp. 2567--2577, Association for Computational Linguistics.
+
+\bibitem{xu2025simragselfimprovingretrievalaugmentedgeneration}
+Ran Xu, Hui Liu, Sreyashi Nag, Zhenwei Dai, Yaochen Xie, Xianfeng Tang, Chen Luo, Yang Li, Joyce~C. Ho, Carl Yang, and Qi~He,
+\newblock ``Simrag: Self-improving retrieval-augmented generation for adapting large language models to specialized domains,'' 2025.
+
+\bibitem{shi2024medadapter}
+Wenqi Shi, Ran Xu, Yuchen Zhuang, Yue Yu, Hang Wu, Carl Yang, and May~D Wang,
+\newblock ``Medadapter: Efficient test-time adaptation of large language models towards medical reasoning,''
+\newblock in {\em EMNLP}, 2024.
+
+\bibitem{miller2020effect}
+John Miller, Karl Krauth, Benjamin Recht, and Ludwig Schmidt,
+\newblock ``The effect of natural distribution shift on question answering models,''
+\newblock in {\em Proceedings of the 37th International Conference on Machine Learning, {ICML} 2020, 13-18 July 2020, Virtual Event}. 2020, vol. 119 of {\em Proceedings of Machine Learning Research}, pp. 6905--6916, {PMLR}.
+
+\bibitem{liu-etal-2022-challenges}
+Linqing Liu, Patrick Lewis, Sebastian Riedel, and Pontus Stenetorp,
+\newblock ``Challenges in generalization in open domain question answering,''
+\newblock in {\em Findings of the Association for Computational Linguistics: NAACL 2022}, Marine Carpuat, Marie-Catherine de~Marneffe, and Ivan~Vladimir Meza~Ruiz, Eds., Seattle, United States, July 2022, pp. 2014--2029, Association for Computational Linguistics.
+
+\bibitem{sun2020test}
+Yu~Sun, Xiaolong Wang, Zhuang Liu, John Miller, Alexei Efros, and Moritz Hardt,
+\newblock ``Test-time training with self-supervision for generalization under distribution shifts,''
+\newblock in {\em International conference on machine learning}. PMLR, 2020, pp. 9229--9248.
+
+\bibitem{karmanov2024efficienttesttimeadaptationvisionlanguage}
+Adilbek Karmanov, Dayan Guan, Shijian Lu, Abdulmotaleb~El Saddik, and Eric Xing,
+\newblock ``Efficient test-time adaptation of vision-language models,'' 2024.
+
+\bibitem{liang2024comprehensive}
+Jian Liang, Ran He, and Tieniu Tan,
+\newblock ``A comprehensive survey on test-time adaptation under distribution shifts,''
+\newblock {\em International Journal of Computer Vision}, pp. 1--34, 2024.
+
+\bibitem{jiang-etal-2023-active}
+Zhengbao Jiang, Frank Xu, Luyu Gao, Zhiqing Sun, Qian Liu, Jane Dwivedi-Yu, Yiming Yang, Jamie Callan, and Graham Neubig,
+\newblock ``Active retrieval augmented generation,''
+\newblock in {\em Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing}, Houda Bouamor, Juan Pino, and Kalika Bali, Eds., Singapore, Dec. 2023, pp. 7969--7992, Association for Computational Linguistics.
+
+\bibitem{jeong-etal-2024-adaptive}
+Soyeong Jeong, Jinheon Baek, and et~al.,
+\newblock ``Adaptive-{RAG}: Learning to adapt retrieval-augmented large language models through question complexity,''
+\newblock in {\em NAACL 2024}, Kevin Duh, Helena Gomez, and Steven Bethard, Eds., Mexico City, Mexico, June 2024, pp. 7036--7050, Association for Computational Linguistics.
+
+\bibitem{robustlm}
+Ori Yoran, Tomer Wolfson, Ori Ram, and Jonathan Berant,
+\newblock ``Making retrieval-augmented language models robust to irrelevant context,''
+\newblock in {\em ICLR}, 2024.
+
+\bibitem{yu2024rankrag}
+Yue Yu, Wei Ping, Zihan Liu, Boxin Wang, Jiaxuan You, Chao Zhang, Mohammad Shoeybi, and Bryan Catanzaro,
+\newblock ``Rankrag: Unifying context ranking with retrieval-augmented generation in llms,''
+\newblock in {\em NeurIPS}, 2024.
+
+\bibitem{liu2024chatqa}
+Zihan Liu, Wei Ping, Rajarshi Roy, Peng Xu, Mohammad Shoeybi, and Bryan Catanzaro,
+\newblock ``Chatqa: Surpassing gpt-4 on conversational qa and rag,''
+\newblock in {\em NeurIPS}, 2024.
+
+\bibitem{lin2024radit}
+Xi~Victoria Lin, Xilun Chen, Mingda Chen, Weijia Shi, Maria Lomeli, Richard James, Pedro Rodriguez, Jacob Kahn, Gergely Szilvasy, Mike Lewis, Luke Zettlemoyer, and Wen tau Yih,
+\newblock ``{RA}-{DIT}: Retrieval-augmented dual instruction tuning,''
+\newblock in {\em ICLR}, 2024.
+
+\bibitem{wang2021tent}
+Dequan Wang, Evan Shelhamer, Shaoteng Liu, Bruno Olshausen, and Trevor Darrell,
+\newblock ``Tent: Fully test-time adaptation by entropy minimization,''
+\newblock in {\em International Conference on Learning Representations}, 2021.
+
+\bibitem{boudiaf2022parameter}
+Malik Boudiaf, Romain Mueller, Ismail Ben~Ayed, and Luca Bertinetto,
+\newblock ``Parameter-free online test-time adaptation,''
+\newblock in {\em IEEE Conference on Computer Vision and Pattern Recognition}, 2022, pp. 8344--8353.
+
+\bibitem{liang2020we}
+Jian Liang, Dapeng Hu, and Jiashi Feng,
+\newblock ``Do we really need to access the source data? source hypothesis transfer for unsupervised domain adaptation,''
+\newblock in {\em International Conference on Machine Learning (ICML)}, 2020, pp. 6028--6039.
+
+\bibitem{kuzborskij2013stability}
+I.~Kuzborskij and F.~Orabona,
+\newblock ``Stability and {H}ypothesis {T}ransfer {L}earning,''
+\newblock in {\em International Conference on Machine Learning (ICML)}, 2013, pp. 942--950.
+
+\bibitem{schneider2020improving}
+Steffen Schneider, Evgenia Rusak, Luisa Eck, Oliver Bringmann, Wieland Brendel, and Matthias Bethge,
+\newblock ``Improving robustness against common corruptions by covariate shift adaptation,''
+\newblock in {\em Advances in Neural Information Processing Systems}, 2020, vol.~33, pp. 11539--11551.
+
+\bibitem{yang2024crag}
+Xiao Yang, Kai Sun, Hao Xin, Yushi Sun, Nikita Bhalla, Xiangsen Chen, Sajal Choudhary, Rongze~Daniel Gui, Ziran~Will Jiang, Ziyu Jiang, et~al.,
+\newblock ``Crag--comprehensive rag benchmark,''
+\newblock {\em arXiv preprint arXiv:2406.04744}, 2024.
+
+\bibitem{bioasq}
+George Tsatsaronis, Georgios Balikas, Prodromos Malakasiotis, Ioannis Partalas, Matthias Zschunke, Michael~R Alvers, Dirk Weissenborn, Anastasia Krithara, Sergios Petridis, Dimitris Polychronopoulos, et~al.,
+\newblock ``An overview of the bioasq large-scale biomedical semantic indexing and question answering competition,''
+\newblock {\em BMC bioinformatics}, 2015.
+
+\bibitem{wei2022chain}
+Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Fei Xia, Ed~Chi, Quoc~V Le, Denny Zhou, et~al.,
+\newblock ``Chain-of-thought prompting elicits reasoning in large language models,''
+\newblock {\em Advances in neural information processing systems}, vol. 35, pp. 24824--24837, 2022.
+
+\bibitem{fang2024enhancing}
+Feiteng Fang, Yuelin Bai, Shiwen Ni, Min Yang, Xiaojun Chen, and Ruifeng Xu,
+\newblock ``Enhancing noise robustness of retrieval-augmented language models with adaptive adversarial training,''
+\newblock {\em arXiv preprint arXiv:2405.20978}, 2024.
+
+\bibitem{asai2023self}
+Akari Asai, Zeqiu Wu, Yizhong Wang, Avirup Sil, and Hannaneh Hajishirzi,
+\newblock ``Self-rag: Learning to retrieve, generate, and critique through self-reflection,''
+\newblock {\em arXiv preprint arXiv:2310.11511}, 2023.
+
+\end{thebibliography}

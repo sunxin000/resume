@@ -45,9 +45,18 @@
       "Read(//Users/sunxin/.ssh/**)",
       "Bash(ssh ali:*)",
       "Bash(rsync:*)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Read(//private/tmp/pptx-check/ppt/media/**)",
+      "Bash(xxd /tmp/pptx-check/ppt/media/image1.png)",
+      "Bash(xxd /tmp/pptx-check/ppt/media/image-4-1.png)",
+      "Bash(unzip -o CIKM_poster.zip -d cikm-poster)",
+      "Bash(xelatex -interaction=nonstopmode poster.tex)",
+      "Bash(bibtex poster *)",
+      "Bash(sips -s format png -s formatOptions 8 figures/framework.png --out figures/framework_8bit.png)",
+      "Bash(sips -s format png -s formatOptions 8 figures/lr_analysis.png --out figures/lr_analysis_8bit.png)",
+      "Bash(sips -s format png -s formatOptions 8 figures/pairs_analysis.png --out figures/pairs_analysis_8bit.png)",
+      "Bash(sips *)",
+      "mcp__codefusesearchmcp__webFetch",
+      "mcp__codefusesearchmcp__webSearch"
     ]
   }
 }

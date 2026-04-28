@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>TTARAG - ICASSP 2026 Poster</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', function () { setTimeout(function () { if (typeof renderMathInElement === 'function') renderMathInElement(document.body, { delimiters: [{ left: '$$', right: '$$', display: true }, { left: '$', right: '$', display: false }] }); }, 500) });</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    /* === A0 PORTRAIT: 841mm x 1189mm === */
+    @page {
+      size: 841mm 1189mm;
+      margin: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-family: 'Inter', sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      width: 841mm;
+      height: 1189mm;
+      background: #f5f3ef;
+      overflow: hidden;
+      transform-origin: top left;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media screen {
+      html {
+        background: #666;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      body {
+        position: absolute;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, .4);
+      }
+    }
+
+    @media print {
+      html {
+        background: none;
+      }
+
+      body {
+        position: static;
+        transform: none !important;
+        box-shadow: none;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+    }
+
+    /* === HEADER === */
+    .header {
+      background: linear-gradient(135deg, #0a1628 0%, #132b50 40%, #1a4a8a 70%, #2563a8 100%);
+      padding: 18mm 20mm 14mm;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50mm;
+      right: -30mm;
+      width: 200mm;
+      height: 200mm;
+      background: radial-gradient(circle, rgba(255, 200, 60, .12) 0%, transparent 70%);
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: -40mm;
+      left: 20%;
+      width: 300mm;
+      height: 120mm;
+      background: radial-gradient(ellipse, rgba(100, 180, 255, .08) 0%, transparent 70%);
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 14mm;
+    }
+
+    .header-left {
+      flex: 1;
+    }
+
+    .header h1 {
+      font-size: 48pt;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 4mm;
+      letter-spacing: -0.5pt;
+    }
+
+    .header h1 .accent {
+      color: #ffc83d;
+    }
+
+    .authors {
+      font-size: 22pt;
+      color: rgba(255, 255, 255, .92);
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .authors sup {
+      font-size: 13pt;
+      color: #ffc83d;
+      margin: 0 0.5mm;
+    }
+
+    .affiliations {
+      font-size: 17pt;
+      color: rgba(255, 255, 255, .6);
+      margin-top: 3mm;
+      font-weight: 500;
+    }
+
+    .affiliations sup {
+      color: #ffc83d;
+      font-size: 12pt;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 10mm;
+      flex-shrink: 0;
+    }
+
+    .conf-badge {
+      font-size: 22pt;
+      font-weight: 900;
+      color: #fff;
+      background: rgba(255, 200, 61, .2);
+      border: 2.5px solid rgba(255, 200, 61, .6);
+      padding: 3mm 10mm;
+      border-radius: 4mm;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .conf-badge small {
+      display: block;
+      font-size: 12pt;
+      font-weight: 600;
+      color: rgba(255, 255, 255, .7);
+    }
+
+    .qr-box {
+      text-align: center;
+    }
+
+    .qr-box img {
+      width: 30mm;
+      height: 30mm;
+      border-radius: 2.5mm;
+      background: #fff;
+      padding: 1.2mm;
+      display: block;
+    }
+
+    .qr-box .qr-label {
+      font-size: 9pt;
+      color: #ffc83d;
+      font-weight: 700;
+      margin-top: 1.5mm;
+    }
+
+    /* === MAIN CONTENT === */
+    .content {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5mm;
+      padding: 5mm 20mm 10mm;
+      min-height: 0;
+    }
+
+    /* === CARDS === */
+    .card {
+      background: #fff;
+      border-radius: 4mm;
+      padding: 7mm 8mm;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, .06);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      border-radius: 4mm 4mm 0 0;
+    }
+
+    .card.c-blue::before {
+      background: linear-gradient(90deg, #1a6fb5, #3498db);
+    }
+
+    .card.c-teal::before {
+      background: linear-gradient(90deg, #0d9e6d, #2dd4a8);
+    }
+
+    .card.c-purple::before {
+      background: linear-gradient(90deg, #6b4fa0, #9b7fd4);
+    }
+
+    .card.c-orange::before {
+      background: linear-gradient(90deg, #d97706, #f59e0b);
+    }
+
+    .card.c-red::before {
+      background: linear-gradient(90deg, #c0392b, #e74c3c);
+    }
+
+    .card h2 {
+      font-size: 28pt;
+      font-weight: 800;
+      margin-bottom: 4mm;
+      display: flex;
+      align-items: center;
+      gap: 3mm;
+    }
+
+    .card.c-blue h2 {
+      color: #1a6fb5;
+    }
+
+    .card.c-teal h2 {
+      color: #0d9e6d;
+    }
+
+    .card.c-purple h2 {
+      color: #6b4fa0;
+    }
+
+    .card.c-orange h2 {
+      color: #d97706;
+    }
+
+    .card.c-red h2 {
+      color: #c0392b;
+    }
+
+    .card h2 .icon {
+      font-size: 24pt;
+    }
+
+    .card p,
+    .card li {
+      font-size: 20pt;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    .card ul {
+      padding-left: 8mm;
+    }
+
+    .card li {
+      margin-bottom: 3mm;
+    }
+
+    .card li b {
+      color: #1a1a2e;
+    }
+
+    /* Highlight box */
+    .hl {
+      padding: 5mm 6mm;
+      border-radius: 3mm;
+      margin-bottom: 4mm;
+    }
+
+    .hl-blue {
+      background: linear-gradient(135deg, #e8f4fd, #d1eafc);
+      border-left: 5px solid #1a6fb5;
+    }
+
+    .hl-orange {
+      background: linear-gradient(135deg, #fef3e2, #fde8c8);
+      border-left: 5px solid #d97706;
+    }
+
+    .hl-green {
+      background: linear-gradient(135deg, #e6f9f0, #ccf2e1);
+      border-left: 5px solid #0d9e6d;
+    }
+
+    .hl p {
+      font-size: 20pt;
+      font-weight: 600;
+      line-height: 1.45;
+      color: #1a1a2e;
+    }
+
+    /* Figures */
+    .fig {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      margin: 2mm 0;
+    }
+
+    .fig-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 0;
+      overflow: hidden;
+      background: #fafafa;
+      border-radius: 3mm;
+      padding: 3mm;
+    }
+
+    .fig-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .fig .cap {
+      font-size: 16pt;
+      color: #666;
+      margin-top: 2mm;
+      line-height: 1.35;
+    }
+
+    .fig .cap b {
+      color: #333;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 18pt;
+      margin: 3mm 0;
+    }
+
+    thead th {
+      background: linear-gradient(135deg, #132b50, #1a6fb5);
+      color: #fff;
+      padding: 3mm 4mm;
+      text-align: center;
+      font-weight: 700;
+      font-size: 17pt;
+    }
+
+    thead th:first-child {
+      text-align: left;
+      border-radius: 2mm 0 0 0;
+    }
+
+    thead th:last-child {
+      border-radius: 0 2mm 0 0;
+    }
+
+    tbody td {
+      padding: 2.5mm 4mm;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    tbody td:first-child {
+      text-align: left;
+      font-weight: 600;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f8f9fb;
+    }
+
+    .best {
+      font-weight: 800;
+      color: #d97706;
+    }
+
+    .our-row {
+      background: linear-gradient(90deg, #e8f4fd, #d1eafc) !important;
+    }
+
+    .delta-pos {
+      color: #0d9e6d;
+      font-weight: 800;
+    }
+
+    .delta-neg {
+      color: #c0392b;
+      font-weight: 700;
+    }
+
+    .group-header td {
+      font-weight: 700;
+      font-style: italic;
+      background: #f0f0f5 !important;
+      font-size: 17pt;
+      color: #555;
+    }
+
+    /* Equations */
+    .eq {
+      background: linear-gradient(135deg, #fef3e2, #fde8c8);
+      border: 1.5px solid #f0c060;
+      border-radius: 3mm;
+      padding: 4mm 6mm;
+      margin: 4mm 0;
+      text-align: center;
+    }
+
+    .katex {
+      font-size: 22pt !important;
+    }
+
+    /* Links box */
+    .links-box {
+      background: linear-gradient(135deg, #e8f4fd, #d1eafc);
+      padding: 5mm 6mm;
+      border-radius: 3mm;
+      margin-top: 4mm;
+      display: flex;
+      align-items: center;
+      gap: 6mm;
+    }
+
+    .links-box .link-text {
+      font-size: 20pt;
+      line-height: 1.6;
+    }
+
+    .links-box .link-text b {
+      color: #1a6fb5;
+    }
+
+    /* Full-width card spanning both columns */
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    /* Scale to fit viewport */
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-content">
+      <div class="header-left">
+        <h1><span class="accent">TTARAG:</span> Predict the Retrieval!<br>Test Time Adaptation for Retrieval Augmented
+          Generation</h1>
+        <div class="authors">
+          Xin Sun<sup>1</sup>, Zhongqi Chen<sup>2</sup>, Qiang Liu<sup>1</sup>, Shu Wu<sup>1</sup>, Bowen
+          Song<sup>2</sup>, Weiqiang Wang<sup>2</sup>, Zilei Wang<sup>3</sup>, Liang Wang<sup>1</sup>
+        </div>
+        <div class="affiliations">
+          <sup>1</sup> NLPR, MAIS, CASIA &nbsp;&nbsp;&nbsp; <sup>2</sup> Ant Group &nbsp;&nbsp;&nbsp; <sup>3</sup> USTC
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="conf-badge">ICASSP<br>2026</div>
+        <div class="qr-box"><img src="qr.png" alt="Code QR">
+          <div class="qr-label">GitHub Code</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT: 2-column grid -->
+  <div class="content">
+
+    <!-- ===== ROW 1 LEFT: TL;DR ===== -->
+    <div class="card c-blue">
+      <h2><span class="icon">💡</span> TL;DR</h2>
+      <div class="hl hl-blue">
+        <p>We propose TTARAG — a test-time adaptation method that dynamically updates LLM parameters during inference by
+          learning to predict retrieved content, enabling automatic domain adaptation for RAG systems <b>without any
+            labeled data</b>.</p>
+      </div>
+      <ul>
+        <li><b>Problem:</b> RAG systems struggle with distribution shifts in specialized domains (medical, finance,
+          etc.), often failing to utilize domain-specific context effectively</li>
+        <li><b>Self-supervised adaptation:</b> Split retrieved passages into prefix-suffix pairs; train the model to
+          predict suffix from prefix + query, learning domain-specific language patterns</li>
+        <li><b>No labeled data required:</b> Fully unsupervised — adapts using only the retrieved passages available at
+          test time, no source domain access needed</li>
+        <li><b>Consistent improvements:</b> Achieves the best results in 19 out of 24 experimental settings across 6
+          specialized domains with 3 different model architectures</li>
+        <li><b>Dramatic medical QA gains:</b> Up to +25.0% on PubMedQA, +19.4% on BioASQ — significantly outperforming
+          CoT, ICL, and pretrained RAG models</li>
+        <li><b>Computationally efficient:</b> 40% faster than Chain-of-Thought reasoning while achieving superior
+          performance</li>
+      </ul>
+    </div>
+
+    <!-- ===== ROW 1 RIGHT: Framework ===== -->
+    <div class="card c-teal">
+      <h2><span class="icon">🏗️</span> Framework Overview</h2>
+      <div class="fig">
+        <div class="fig-wrap">
+          <img src="framework.png" alt="TTARAG Framework">
+        </div>
+        <div class="cap"><b>Figure 1.</b> Standard RAG (left) directly uses retrieved passages. TTARAG (right)
+          introduces a test-time adaptation module: passages are split into prefix-suffix pairs → self-supervised
+          learning predicts suffixes → model parameters are updated before final answer generation.</div>
+      </div>
+    </div>
+
+    <!-- ===== ROW 2 LEFT: Methodology ===== -->
+    <div class="card c-teal">
+      <h2><span class="icon">⚙️</span> Methodology</h2>
+      <div class="hl hl-green">
+        <p>Key insight: By predicting suffix from prefix, the model is encouraged to understand contextual relationships
+          and domain-specific language patterns within retrieved documents, aligning its internal representations with
+          the target domain.</p>
+      </div>
+      <p style="font-size:19pt;margin-bottom:3mm;"><b>Step 1 — Self-Supervised Adaptation Objective:</b></p>
+      <div class="eq">$\mathcal{L}_{adapt} = -\sum_{i=1}^{k} \log P(p_i^{suffix} \mid p_i^{prefix}, q;\; \theta)$</div>
+      <ul>
+        <li><b>Length Filtering:</b> Passages shorter than a configured minimum length threshold are filtered out to
+          ensure sufficient context for meaningful adaptation</li>
+        <li><b>Passage Splitting:</b> Two-tier strategy — (1) split at natural linguistic boundaries (periods, commas,
+          semicolons); (2) fallback to midpoint division ensuring ≥3 words per segment</li>
+        <li><b>Parameter Update:</b> Reset to pretrained state per query; AdamW optimizer with gradient accumulation
+          over 2 steps and gradient clipping for stable training. Only 3 prefix-suffix pairs needed</li>
+      </ul>
+      <p style="font-size:19pt;margin:3mm 0;"><b>Step 2 — Response Generation with adapted $\theta'$:</b></p>
+      <div class="eq">$y = \arg\max_y P(y \mid q, \{p_1, \ldots, p_k\};\; \theta')$</div>
+      <p style="font-size:19pt;margin-top:2mm;">The adapted model generates the final response using the domain-aligned
+        parameters, leveraging both the retrieved passages and the newly acquired domain knowledge.</p>
+    </div>
+
+    <!-- ===== ROW 2 RIGHT: Main Results ===== -->
+    <div class="card c-purple">
+      <h2><span class="icon">📊</span> Main Results — Accuracy (%)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Finance</th>
+            <th>Sports</th>
+            <th>Music</th>
+            <th>Movie</th>
+            <th>Open</th>
+            <th>Overall</th>
+            <th>BioASQ</th>
+            <th>PubMed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group-header">
+            <td colspan="9">Llama-3.1-8b-it</td>
+          </tr>
+          <tr>
+            <td>naive-rag</td>
+            <td>17.4</td>
+            <td>27.6</td>
+            <td>34.9</td>
+            <td>31.3</td>
+            <td>42.4</td>
+            <td>29.8</td>
+            <td>55.6</td>
+            <td>46.6</td>
+          </tr>
+          <tr>
+            <td>+CoT</td>
+            <td>17.9</td>
+            <td>30.2</td>
+            <td>37.6</td>
+            <td>31.5</td>
+            <td>45.8</td>
+            <td>31.6</td>
+            <td>54.6</td>
+            <td>50.8</td>
+          </tr>
+          <tr>
+            <td>+ICL</td>
+            <td>16.1</td>
+            <td>24.8</td>
+            <td>33.5</td>
+            <td>29.4</td>
+            <td>40.4</td>
+            <td>28.0</td>
+            <td>49.8</td>
+            <td>53.6</td>
+          </tr>
+          <tr class="our-row">
+            <td><b>TTARAG</b></td>
+            <td class="best">20.1</td>
+            <td>29.5</td>
+            <td class="best">37.7</td>
+            <td class="best">34.6</td>
+            <td>41.5</td>
+            <td class="best">31.9</td>
+            <td class="best">75.0</td>
+            <td class="best">57.4</td>
+          </tr>
+          <tr style="background:#e6f9f0">
+            <td>Δ vs naive</td>
+            <td class="delta-pos">+2.7</td>
+            <td class="delta-pos">+1.9</td>
+            <td class="delta-pos">+2.8</td>
+            <td class="delta-pos">+3.3</td>
+            <td class="delta-neg">-0.9</td>
+            <td class="delta-pos">+2.1</td>
+            <td class="delta-pos">+19.4</td>
+            <td class="delta-pos">+10.8</td>
+          </tr>
+          <tr class="group-header">
+            <td colspan="9">Llama-2-7b-chat</td>
+          </tr>
+          <tr>
+            <td>naive-rag</td>
+            <td>14.7</td>
+            <td>23.2</td>
+            <td>36.5</td>
+            <td>30.4</td>
+            <td>39.2</td>
+            <td>27.8</td>
+            <td>54.1</td>
+            <td>47.6</td>
+          </tr>
+          <tr class="our-row">
+            <td><b>TTARAG</b></td>
+            <td class="best">16.4</td>
+            <td>25.8</td>
+            <td class="best">40.7</td>
+            <td class="best">33.8</td>
+            <td>41.1</td>
+            <td class="best">30.5</td>
+            <td class="best">71.8</td>
+            <td class="best">54.0</td>
+          </tr>
+          <tr style="background:#e6f9f0">
+            <td>Δ vs naive</td>
+            <td class="delta-pos">+1.7</td>
+            <td class="delta-pos">+2.6</td>
+            <td class="delta-pos">+4.2</td>
+            <td class="delta-pos">+3.4</td>
+            <td class="delta-pos">+1.9</td>
+            <td class="delta-pos">+2.7</td>
+            <td class="delta-pos">+17.7</td>
+            <td class="delta-pos">+6.4</td>
+          </tr>
+          <tr class="group-header">
+            <td colspan="9">ChatGLM-3-6b</td>
+          </tr>
+          <tr>
+            <td>naive-rag</td>
+            <td>9.8</td>
+            <td>18.7</td>
+            <td>31.4</td>
+            <td>22.4</td>
+            <td>33.4</td>
+            <td>22.0</td>
+            <td>51.4</td>
+            <td>19.8</td>
+          </tr>
+          <tr class="our-row">
+            <td><b>TTARAG</b></td>
+            <td class="best">14.0</td>
+            <td class="best">22.1</td>
+            <td class="best">33.5</td>
+            <td>25.5</td>
+            <td class="best">38.1</td>
+            <td class="best">25.7</td>
+            <td class="best">58.4</td>
+            <td class="best">44.8</td>
+          </tr>
+          <tr style="background:#e6f9f0">
+            <td>Δ vs naive</td>
+            <td class="delta-pos">+4.2</td>
+            <td class="delta-pos">+3.4</td>
+            <td class="delta-pos">+2.1</td>
+            <td class="delta-pos">+3.1</td>
+            <td class="delta-pos">+4.7</td>
+            <td class="delta-pos">+3.7</td>
+            <td class="delta-pos">+7.0</td>
+            <td class="delta-pos">+25.0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== ROW 3 LEFT: vs SOTA + Ablation ===== -->
+    <div class="card c-orange">
+      <h2><span class="icon">🏆</span> vs. Pretrained RAG Models</h2>
+      <p style="font-size:13pt;color:#888;margin-bottom:2mm;">All models use Llama-2-7b-chat backbone</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Finance</th>
+            <th>Sports</th>
+            <th>Music</th>
+            <th>Movie</th>
+            <th>Open</th>
+            <th>Overall</th>
+            <th>BioASQ</th>
+            <th>PubMed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Naive-RAG</td>
+            <td>14.7</td>
+            <td>23.2</td>
+            <td>36.5</td>
+            <td>30.4</td>
+            <td>39.2</td>
+            <td>27.8</td>
+            <td>54.1</td>
+            <td>47.6</td>
+          </tr>
+          <tr>
+            <td>Ret-Robust</td>
+            <td>14.6</td>
+            <td>20.6</td>
+            <td>33.2</td>
+            <td>32.4</td>
+            <td>33.5</td>
+            <td>26.1</td>
+            <td>24.7</td>
+            <td>28.4</td>
+          </tr>
+          <tr>
+            <td>RAAT</td>
+            <td>13.4</td>
+            <td>18.1</td>
+            <td>28.6</td>
+            <td>25.2</td>
+            <td>31.7</td>
+            <td>22.7</td>
+            <td>64.9</td>
+            <td>46.6</td>
+          </tr>
+          <tr>
+            <td>Self-RAG</td>
+            <td>11.4</td>
+            <td>19.8</td>
+            <td>22.5</td>
+            <td>20.9</td>
+            <td>26.7</td>
+            <td>19.8</td>
+            <td>57.1</td>
+            <td>43.4</td>
+          </tr>
+          <tr class="our-row">
+            <td><b>TTARAG</b></td>
+            <td class="best">16.4</td>
+            <td class="best">25.8</td>
+            <td class="best">40.7</td>
+            <td class="best">33.8</td>
+            <td class="best">41.1</td>
+            <td class="best">30.5</td>
+            <td class="best">71.8</td>
+            <td class="best">54.0</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="margin-top:3mm;">
+        <h2 style="font-size:18pt;color:#d97706;margin-bottom:2mm;"><span class="icon">🔬</span> Ablation: Segmentation
+        </h2>
+        <div class="hl hl-orange">
+          <p>Prefix-suffix segmentation consistently outperforms whole-passage next-token prediction:<br>+1.1%
+            (Llama-3.1-8b), +0.4% (Llama-2-7b), +0.7% (ChatGLM-3-6b)</p>
+        </div>
+        <ul>
+          <li>The front-to-back prediction task better aligns with natural language understanding compared to
+            token-by-token prediction</li>
+          <li>Higher-capacity models benefit more from structured adaptation (+1.1% for Llama-3.1 vs +0.4% for Llama-2)
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ===== ROW 3 RIGHT: Hyperparams + Efficiency + Conclusion ===== -->
+    <div class="card c-orange" style="display:flex;flex-direction:column;">
+      <h2><span class="icon">📈</span> Hyperparameter Analysis</h2>
+      <div class="fig" style="flex:1;">
+        <div class="fig-wrap"><img src="accuracy_vs_lr.png" alt="LR Analysis"></div>
+        <div class="cap"><b>Figure 2.</b> Accuracy vs. Learning Rate — optimal range: 1e-6 to 1e-5</div>
+      </div>
+      <div class="fig" style="flex:1;margin-top:2mm;">
+        <div class="fig-wrap"><img src="accuracy_vs_pairs.png" alt="Pairs Analysis"></div>
+        <div class="cap"><b>Figure 3.</b> Accuracy vs. Number of Adaptation Pairs — 3-5 pairs yield best results</div>
+      </div>
+      <div style="margin-top:3mm;">
+        <h2 style="font-size:22pt;color:#d97706;margin-bottom:3mm;"><span class="icon">⏱️</span> Computational
+          Efficiency</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>1 pair</th>
+              <th>3 pairs</th>
+              <th>5 pairs</th>
+              <th>CoT</th>
+              <th>Naive</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Total (s)</td>
+              <td>4,740</td>
+              <td>6,621</td>
+              <td>7,023</td>
+              <td>11,688</td>
+              <td>961</td>
+            </tr>
+            <tr>
+              <td>Avg (s/query)</td>
+              <td>1.75</td>
+              <td>2.45</td>
+              <td>2.60</td>
+              <td>4.32</td>
+              <td>0.36</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ===== BOTTOM ROW: Conclusion (full width) ===== -->
+    <div class="card c-red full-width" style="flex-direction:row;align-items:center;gap:8mm;">
+      <div style="flex:1;">
+        <h2><span class="icon">🎯</span> Conclusion</h2>
+        <ul>
+          <li><b>TTARAG</b> enables fully unsupervised domain adaptation for RAG at inference time</li>
+          <li>Simple prefix-suffix prediction provides effective self-supervised signals — no labeled data needed</li>
+          <li>Up to <b>+25%</b> improvement on specialized domains; <b>40% faster</b> than Chain-of-Thought</li>
+          <li>Test-time adaptation is a promising direction for domain-specific RAG systems</li>
+        </ul>
+      </div>
+      <div class="links-box" style="flex-shrink:0;">
+        <div class="link-text">
+          <b>📦 Code:</b> github.com/sunxin000/TTARAG<br>
+          <b>📄 Paper:</b> arXiv:2601.11443<br>
+          <b>📧 Contact:</b> xin.sun@cripic.ia.ac.cn
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Auto-scale poster to fit viewport
+    (function () {
+      var MM = 3.7795275591, W = 841 * MM, H = 1189 * MM;
+      function fit() {
+        if (window.matchMedia('print').matches) return;
+        var s = Math.min(window.innerWidth / W, window.innerHeight / H);
+        var l = (window.innerWidth - W * s) / 2, t = (window.innerHeight - H * s) / 2;
+        document.body.style.transform = 'translate(' + l + 'px,' + t + 'px) scale(' + s + ')';
+      }
+      fit(); window.addEventListener('resize', fit);
+    })();
+  </script>
+</body>
+
+</html>
