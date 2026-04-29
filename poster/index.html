@@ -11,9 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <style>
-    /* === A0 PORTRAIT: 841mm x 1189mm === */
+    /* === A0 LANDSCAPE: 1189mm x 841mm === */
     @page {
-      size: 841mm 1189mm;
+      size: 1189mm 841mm;
       margin: 0;
     }
 
@@ -30,8 +30,8 @@
     }
 
     body {
-      width: 841mm;
-      height: 1189mm;
+      width: 1189mm;
+      height: 841mm;
       background: #f5f3ef;
       overflow: hidden;
       transform-origin: top left;
@@ -881,7 +881,7 @@
   <script>
     // Auto-scale poster to fit viewport
     (function () {
-      var MM = 3.7795275591, W = 841 * MM, H = 1189 * MM;
+      var MM = 3.7795275591, W = 1189 * MM, H = 841 * MM;
       function fit() {
         if (window.matchMedia('print').matches) return;
         var s = Math.min(window.innerWidth / W, window.innerHeight / H);
