@@ -93,7 +93,7 @@
 我的研究聚焦于\textbf{检索增强生成 (RAG)} 与\textbf{大模型智能体训练}，涵盖两个核心方向：
 \textbf{(1) RAG \& Deep Search}——构建可靠、自适应的检索增强系统，使模型知道何时、检索什么、如何检索，迈向自主深度研究智能体；
 \textbf{(2) LLM Agent Training}——通过强化学习与后训练赋予大模型智能体多轮探索、工具调用、结构化推理及环境反馈学习等能力。
-博士期间已发表\textbf{6 篇一作论文}。
+博士期间已发表\textbf{6 篇一作顶会/顶刊论文}。
 
 %----------EDUCATION----------
 \section{教育背景}
@@ -104,7 +104,7 @@
       \resumeItemListStart
         \resumeItem{中国科学院自动化研究所模式识别国家重点实验室 (NLPR)}
         \resumeItem{导师：王亮 教授（IEEE Fellow）、刘强 副研究员}
-        \resumeItem{荣誉：研究生国家奖学金（2024）、中国科学技术大学一等学业奖学金（2022--2025, 连续三年）}
+        \resumeItem{荣誉：国家奖学金（2024）、中国科学技术大学一等学业奖学金（2022--2025, 连续三年）}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -118,13 +118,13 @@
 %----------PUBLICATIONS----------
 \section{论文发表}
 
-\textbf{\color{primary} $\blacktriangleright$ \quad RAG, Deep Search \& Agentic RL（核心研究方向）}
+\textbf{\color{primary} $\blacktriangleright$ \quad 一作论文}
 \begin{enumerate}[leftmargin=0.3in, label={[\arabic*]}]
 
   \pubentry{KBQA-R1: Reinforcing Large Language Models for Knowledge Base Question Answering}
   {\textbf{\underline{Xin Sun}}, Zhongqi Chen, Xing Zheng, Qiang Liu, Shu Wu, Bowen Song, Zilei Wang, Weiqiang Wang, Liang Wang}
   {ICML 2026 (CCF-A)}{}
-  {\small\color{secondary} 将知识库问答建模为多轮 MDP，模型在与 KB 的闭环交互中基于环境反馈自适应调整推理策略；提出 RRS 解决 RL 冷启动，通过 GRPO 以 outcome-based reward 优化策略，三个基准均达 SOTA，推理效率较 MCTS 方法提升 26 倍。}
+  {\small\color{secondary} 将知识库问答建模为多轮 MDP，模型在与 KB 的闭环交互中基于环境反馈自适应调整推理策略；提出 RRS 解决 RL 冷启动，RRGC 缓解稀疏奖励问题，在大幅提升回答准确率的同时推理效率较 MCTS 方法提升 26 倍。}
 
   \pubentry{Divide-Then-Align: Honest Alignment based on the Knowledge Boundary of RAG}
   {\textbf{\underline{Xin Sun}}, Jianan Xie, Zhongqi Chen, Qiang Liu, Shu Wu, Yuehe Chen, Bowen Song, Zilei Wang, Weiqiang Wang, Liang Wang}
@@ -135,22 +135,6 @@
   {\textbf{\underline{Xin Sun}}, Zhongqi Chen, Qiang Liu, Shu Wu, Bowen Song, Weiqiang Wang, Zilei Wang, Liang Wang}
   {ICASSP 2026 (CCF-B)}{}
   {\small\color{secondary} 将检索文档拆分为 prefix-suffix 对构造自监督目标，在推理时动态更新模型参数以适应目标领域，无需标注数据即可显著提升 RAG 在专业领域的性能。}
-
-  \pubentry{ToolWeaver: Weaving Collaborative Semantics for Scalable Tool Use in Large Language Models}
-  {Bowen Fang, Qiang Liu, Yesheng Liu, Jiabing Yang, \textbf{\underline{Xin Sun}}, Shu Wu, Baole Wei, Liang Wang}
-  {ICLR 2026 (CAAI-A)}{}
-  {\small\color{secondary} 通过协作语义编织实现 LLM 面对大规模工具集时的可扩展工具选择与组合。}
-
-  \pubentry{Multimodal Adaptive Retrieval Augmented Generation through Internal Representation Learning}
-  {Ruoshuang Du, \textbf{\underline{Xin Sun}}, Qiang Liu, Bowen Song, Zhongqi Chen, Weiqiang Wang, Liang Wang}
-  {IJCNN 2026 (CCF-C)}{}
-  {\small\color{secondary} 通过内部表征学习实现多模态场景下的自适应检索增强生成。}
-
-\end{enumerate}
-
-\vspace{2pt}
-\textbf{\color{primary} $\blacktriangleright$ \quad 其他研究工作：图学习 \& 可信机器学习}
-\begin{enumerate}[leftmargin=0.3in, label={[\arabic*]}, resume]
 
   \pubentry{DIVE: Subgraph Disagreement for Graph Out-of-Distribution Generalization}
   {\textbf{\underline{Xin Sun}}, Liang Wang, Qiang Liu, Shu Wu, Zilei Wang, Liang Wang}
@@ -167,6 +151,22 @@
   {IEEE TKDE (CCF-A, SCI Q1)}{}
   {\small\color{secondary} 通过不确定性校准改进反事实倾向估计，提升推荐系统转化率预估的准确性与鲁棒性。}
 
+\end{enumerate}
+
+\vspace{2pt}
+\textbf{\color{primary} $\blacktriangleright$ \quad 合作论文}
+\begin{enumerate}[leftmargin=0.3in, label={[\arabic*]}, resume]
+
+  \pubentry{ToolWeaver: Weaving Collaborative Semantics for Scalable Tool Use in Large Language Models}
+  {Bowen Fang, Qiang Liu, Yesheng Liu, Jiabing Yang, \textbf{\underline{Xin Sun}}, Shu Wu, Baole Wei, Liang Wang}
+  {ICLR 2026 (CAAI-A)}{}
+  {\small\color{secondary} 通过协作语义编织实现 LLM 面对大规模工具集时的可扩展工具选择与组合。}
+
+  \pubentry{Multimodal Adaptive Retrieval Augmented Generation through Internal Representation Learning}
+  {Ruoshuang Du, \textbf{\underline{Xin Sun}}, Qiang Liu, Bowen Song, Zhongqi Chen, Weiqiang Wang, Liang Wang}
+  {IJCNN 2026 (CCF-C)}{}
+  {\small\color{secondary} 通过内部表征学习实现多模态场景下的自适应检索增强生成。}
+
   \pubentry{Pin-Tuning: Parameter-Efficient In-Context Tuning for Few-shot Molecular Property Prediction}
   {Liang Wang, Qiang Liu, Shaozhen Liu, \textbf{\underline{Xin Sun}}, Shu Wu, Liang Wang}
   {NeurIPS 2024 (CCF-A)}{}
@@ -179,26 +179,14 @@
 
 \end{enumerate}
 
-%----------PROJECTS----------
-\section{开源项目}
-  \resumeSubHeadingListStart
-    \item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{GSLB: 图结构学习评测基准} & \href{https://github.com/GSL-Benchmark/GSLB}{\faGithub\ GitHub \quad \faStar\ 103} \\
-    \end{tabular*}\vspace{-4pt}
-    \resumeItemListStart
-      \resumeItem{面向图结构学习的开源评测工具库，集成多种结构学习算法，收录大量经典模型复现代码}
-    \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
 %----------EXPERIENCE----------
 \section{实习经历}
   \resumeSubHeadingListStart
     \resumeSubheading
       {蚂蚁集团}{杭州, 中国}
-      {机器智能部门 -- 算法研究实习生}{2024.11 -- 2026.04}
+      {机器智能部门 -- 算法研究实习生}{2024.11 -- 2026.05}
       \resumeItemListStart
-        \resumeItem{RAG 核心方向研究：主导完成多项检索增强生成相关工作，包括 RAG 可信对齐 (ACL 2025)、多模态自适应 RAG (IJCNN 2026)、RAG 测试时自适应 (ICASSP 2026)、知识库问答强化学习 KBQA-R1 (ICML 2026) 等}
+        \resumeItem{构建可信 RAG (Trustworthy RAG) 体系：主导完成多项检索增强生成相关工作，包括 RAG 可信对齐 (ACL 2025)、多模态自适应 RAG (IJCNN 2026)、RAG 测试时自适应 (ICASSP 2026)、知识库问答强化学习 KBQA-R1 (ICML 2026) 等}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -209,6 +197,10 @@
         \resumeItem{推荐系统因果推断研究：提出反事实倾向估计的不确定性校准方法，发表于 IEEE TKDE (CCF-A)}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
+
+%----------HOBBIES----------
+\section{兴趣爱好}
+羽毛球（自评三级）\quad 滑雪（愚昧之巅）\quad 足球（巴萨死忠）\quad 桌游（卡坦岛、宝石、阿瓦隆、花砖、Poker$\cdots$）
 
 %----------SERVICE----------
 \section{学术服务}

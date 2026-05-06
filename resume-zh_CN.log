@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.13)  21 APR 2026 23:22
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.13)  1 MAY 2026 19:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -608,7 +608,7 @@ LaTeX Font Warning: Font shape `TU/STSong(0)/b/sc' undefined
 ! Undefined control sequence.
 <recently read> \blacktriangleright 
                                     
-l.121 ...d RAG, Deep Search \& Agentic RL（核心研究方向）}
+l.121 ...rimary} $\blacktriangleright$ \quad 一作论文}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -620,17 +620,6 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 126.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 126.
-! Undefined control sequence.
-<recently read> \blacktriangleright 
-                                    
-l.152 ...riangleright$ \quad 其他研究工作：图学习 \& 可信机器学习}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 4.08003pt, for example:
@@ -639,6 +628,17 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 [1
 
 ]
+! Undefined control sequence.
+<recently read> \blacktriangleright 
+                                    
+l.157 ...rimary} $\blacktriangleright$ \quad 合作论文}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 4.08003pt, for example:
@@ -654,15 +654,15 @@ L3 programming layer <2022/07/14>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `resume-zh_CN.out' has not changed.
-(rerunfilecheck)             Checksum: 94609D3305E71E02A316CDB98CEDD27F;450.
+(rerunfilecheck)             Checksum: DFDBB37D5D5EAA1DFE7C3B70DB421D43;450.
  ) 
 Here is how much of TeX's memory you used:
- 17358 strings out of 474773
- 369111 string characters out of 5757723
+ 17325 strings out of 474773
+ 366975 string characters out of 5757723
  1959839 words of memory out of 5000000
- 39257 multiletter control sequences out of 15000+600000
+ 39224 multiletter control sequences out of 15000+600000
  563734 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,11n,97p,372b,460s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,12n,97p,372b,531s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on resume-zh_CN.pdf (2 pages).
