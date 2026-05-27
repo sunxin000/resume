@@ -17,6 +17,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{tabularx}
+\usepackage{amssymb}
 \usepackage{fontawesome5}
 \usepackage{xcolor}
 
@@ -93,7 +94,7 @@
 我的研究聚焦于\textbf{检索增强生成 (RAG)} 与\textbf{大模型智能体训练}，涵盖两个核心方向：
 \textbf{(1) RAG \& Deep Search}——构建可靠、自适应的检索增强系统，使模型知道何时、检索什么、如何检索，迈向自主深度研究智能体；
 \textbf{(2) LLM Agent Training}——通过强化学习与后训练赋予大模型智能体多轮探索、工具调用、结构化推理及环境反馈学习等能力。
-博士期间已发表\textbf{6 篇一作顶会/顶刊论文}。
+博士期间已发表\textbf{6 篇一作顶会/顶刊论文}，另有\textbf{1 篇 EMNLP 2026 在投一作论文}。
 
 %----------EDUCATION----------
 \section{教育背景}
@@ -125,6 +126,11 @@
   {\textbf{\underline{Xin Sun}}, Zhongqi Chen, Xing Zheng, Qiang Liu, Shu Wu, Bowen Song, Zilei Wang, Weiqiang Wang, Liang Wang}
   {ICML 2026 (CCF-A)}{}
   {\small\color{secondary} 将知识库问答建模为多轮 MDP，模型在与 KB 的闭环交互中基于环境反馈自适应调整推理策略；提出 RRS 解决 RL 冷启动，RRGC 缓解稀疏奖励问题，在大幅提升回答准确率的同时推理效率较 MCTS 方法提升 26 倍。}
+
+  \pubentry{GAPD: Gold-Action Policy Distillation for Agentic Reinforcement Learning in Knowledge Base Question Answering}
+  {\textbf{\underline{Xin Sun}}, Zhongqi Chen, Xing Zheng, Qiang Liu, Shu Wu, Bowen Song, Zilei Wang, Weiqiang Wang, Liang Wang}
+  {EMNLP 2026 投稿中}{}
+  {\small\color{secondary} 面向 agentic KBQA 中 outcome-only RL 的稀疏监督问题，提出 gold-action-conditioned self-teacher 与 Entity-Anchor Matching，将 gold action 转化为安全对齐的 token-level policy guidance，在保持原始 GRPO 目标的同时提升训练密度与稳定性。}
 
   \pubentry{Divide-Then-Align: Honest Alignment based on the Knowledge Boundary of RAG}
   {\textbf{\underline{Xin Sun}}, Jianan Xie, Zhongqi Chen, Qiang Liu, Shu Wu, Yuehe Chen, Bowen Song, Zilei Wang, Weiqiang Wang, Liang Wang}
