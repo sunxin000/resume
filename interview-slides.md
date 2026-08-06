@@ -44,25 +44,28 @@
 
 ## Slide 3: 研究成果总览
 
-### 核心方向：RAG & Agent（一作/共一 5 篇）
+### 一作 / 共同一作（9 篇）
 
 | # | 论文 | 会议 | 方向 |
 |---|------|------|------|
-| **1** | **KBQA-R1** | ICML 2026 投稿 (4/4/4/5 全正分) | Agent RL |
-| **2** | **Divide-Then-Align** | ACL 2025 Main | RAG 可信对齐 |
-| **3** | **Predict the Retrieval!** | ICASSP 2026 | RAG 自适应 |
-| 4 | ToolWeaver | ICLR 2026（合作） | 工具调用 |
-| 5 | Multimodal Adaptive RAG | IJCNN 2026（共一） | 多模态 RAG |
+| **1** | **KBQA-R1** | ICML 2026（CCF-A） | Agent RL |
+| **2** | **GAPD** | EMNLP 2026 | RAG / Agent |
+| **3** | **EviSD** | AAAI 2027 投稿（共同一作，arXiv:2608.01359） | Search Agent |
+| **4** | **HopRefusalBench** | AAAI 2027 投稿（共同一作，arXiv:2608.01358） | Search Agent 评测 |
+| **5** | **Divide-Then-Align** | ACL 2025 Main | RAG 可信对齐 |
+| **6** | **Predict the Retrieval!** | ICASSP 2026 | RAG 自适应 |
+| **7** | **DIVE** | KDD 2024 | 图学习 |
+| **8** | **Noise-Robust** | EMNLP 2023 Findings | 可信 ML |
+| **9** | **Uncertainty Calibration** | IEEE TKDE | 可信 ML |
 
-### 其他方向：图学习 & 可信 ML
+### 合作论文（4 篇）
 
 | # | 论文 | 会议 |
 |---|------|------|
-| **6** | **DIVE** | KDD 2024（一作） |
-| **7** | **Noise-Robust** | EMNLP 2023（一作） |
-| **8** | **Uncertainty Calibration** | IEEE TKDE（共一） |
-| 9 | Pin-Tuning | NeurIPS 2024 |
-| 10 | GSLB | NeurIPS 2023 |
+| 10 | ToolWeaver | ICLR 2026 |
+| 11 | Multimodal Adaptive RAG | IJCNN 2026 |
+| 12 | Pin-Tuning | NeurIPS 2024 |
+| 13 | GSLB | NeurIPS 2023 |
 
 **学术服务**：ICML 2026, NeurIPS 2025, ACL 2025, EMNLP 2025, KDD 2024 审稿人
 
@@ -105,7 +108,7 @@ RAG 系统面临核心矛盾：**当检索知识与模型内部知识冲突时�
 
 ---
 
-## Slide 7-9: 代表性工作二 — KBQA-R1 (ICML 2026 投稿)
+## Slide 7-9: 代表性工作二 — KBQA-R1 (ICML 2026, CCF-A)
 
 ### 问题背景
 
@@ -131,7 +134,7 @@ RAG 系统面临核心矛盾：**当检索知识与模型内部知识冲突时�
 ### 结果
 - 多个 KBQA 数据集上取得 SOTA
 - 模型学会自主 trial-and-error 探索
-- **审稿评分：4 / 4 / 4 / 5（全正分）**
+- **ICML 2026 已录用（CCF-A）**
 
 ### 意义
 - **对 Agent 方向**：验证了 RL 后训练可赋予 LLM 自主使用结构化工具的能力
@@ -160,13 +163,13 @@ RAG 系统面临核心矛盾：**当检索知识与模型内部知识冲突时�
 
 ## Slide 11: 实习经历
 
-### 蚂蚁集团 — 机器智能部门（2024.11 — 2026.04）
+### 蚂蚁集团 — 机器智能部门（2024.11 — 至今）
 **算法研究实习生**
 
-- 主导完成多项 RAG 核心方向研究，产出 4 篇论文
+- 主导完成 RAG / Agent 核心方向研究，产出 6 篇论文
 - RAG 可信对齐（ACL 2025）、多模态 RAG（IJCNN 2026）
-- RAG 测试时自适应（ICASSP 2026）、KBQA-R1（投稿 ICML 2026）
-- 深入参与工业级 RAG 系统研发，理解学术与工业的结合
+- RAG 测试时自适应（ICASSP 2026）、KBQA-R1（ICML 2026，CCF-A）
+- EviSD、HopRefusalBench（AAAI 2027 投稿，均为共同一作）
 
 ### 字节跳动 — AML（2022.02 — 2022.08）
 **机器学习工程师实习生**

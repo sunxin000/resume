@@ -1,12 +1,10 @@
 %-------------------------
 % Academic CV - Xin Sun
-% Based on Jake's Resume template (MIT License)
-% Compiled with XeLaTeX for CJK support
+% English version
 %-------------------------
 
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage[UTF8,fontset=none]{ctex}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -21,10 +19,6 @@
 \usepackage{amssymb}
 \usepackage{fontawesome5}
 \usepackage{xcolor}
-
-\setCJKmainfont{Songti SC}
-\setCJKsansfont{PingFang SC}
-\setCJKmonofont{PingFang SC}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -89,148 +83,148 @@
 %----------HEADING----------
 \noindent
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  {\Huge \textbf{孙鑫}} \; {\large Xin Sun} &
+  {\Huge \textbf{Xin Sun}} &
   \small \faPhone\ (+86) 193-8968-7089 \;\; \faEnvelope\ \href{mailto:xin.sun@cripac.ia.ac.cn}{xin.sun@cripac.ia.ac.cn} \\[4pt]
-  {\small 中国科学技术大学 \; / \; 中国科学院自动化研究所} &
+  {\small University of Science and Technology of China / CASIA} &
   \small \faGraduationCap\ \href{https://scholar.google.com/citations?user=x2aQKE4AAAAJ}{Google Scholar} \;\; \faGithub\ \href{https://github.com/sunxin000}{GitHub}
 \end{tabular*}
 \vspace{-6pt}
 {\color{primary}\rule{\textwidth}{1.5pt}}
 
 %----------RESEARCH INTERESTS----------
-\section{研究方向}
-我的研究聚焦于\textbf{检索增强生成 (RAG)} 与\textbf{大模型智能体训练}，涵盖两个核心方向：
-\textbf{(1) RAG \& Deep Search}——构建可靠、自适应、具备拒答意识的检索增强系统，使模型知道何时检索、检索什么、如何检索以及何时停止，迈向自主深度研究智能体；
-\textbf{(2) LLM Agent Training}——通过强化学习与后训练赋予大模型智能体多轮探索、工具调用、结构化推理、细粒度 credit assignment 及环境反馈学习等能力。
-目前在蚂蚁集团机器智能部门担任\textbf{蚂蚁星实习生}。
-博士期间已发表\textbf{6 篇一作/共同一作顶会/顶刊论文（CCF-A 4 篇、CCF-B 2 篇）}，另有\textbf{3 篇一作/共同一作在投论文}（EMNLP 2026、AAAI 2027 $\times$ 2）。
+\section{Research Interests}
+My research focuses on \textbf{Retrieval-Augmented Generation (RAG)} and \textbf{LLM Agent Training}, with two core directions:
+\textbf{(1) RAG \& Deep Search}---building reliable, adaptive, and abstention-aware retrieval-augmented systems that know when to retrieve, what to retrieve, how to retrieve, and when to stop or refuse, toward autonomous deep research agents;
+\textbf{(2) LLM Agent Training}---training LLM-based agents through reinforcement learning and post-training to perform multi-turn exploration, tool use, structured reasoning, fine-grained credit assignment, and learning from environment feedback.
+I am currently an \textbf{Ant Star Intern} with the Machine Intelligence Division at Ant Group.
+During my Ph.D. study, I have published \textbf{6 first-/co-first-author papers in top-tier conferences/journals (4 CCF-A and 2 CCF-B)}, with \textbf{3 additional first-/co-first-author papers under review} (EMNLP 2026 and AAAI 2027 $\times$ 2).
 
 %----------EDUCATION----------
-\section{教育背景}
+\section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {中国科学技术大学}{合肥, 中国}
-      {控制科学与工程 \quad 在读博士（中国科学院自动化研究所联合培养）}{2022 -- 2027（预计）}
+      {University of Science and Technology of China (USTC)}{Hefei, China}
+      {Ph.D. Candidate in Control Science and Engineering \quad Joint Program with CASIA}{2022 -- 2027 (Expected)}
       \resumeItemListStart
-        \resumeItem{中国科学院自动化研究所模式识别国家重点实验室 (NLPR)}
-        \resumeItem{导师：王亮 教授（IEEE Fellow）、刘强 副研究员}
-        \resumeItem{荣誉：国家奖学金（2024）、中国科学技术大学一等学业奖学金（2022--2025, 连续三年）}
+        \resumeItem{National Laboratory of Pattern Recognition (NLPR), Institute of Automation, Chinese Academy of Sciences (CASIA)}
+        \resumeItem{Advisors: Prof. Liang Wang (IEEE Fellow) and Assoc. Prof. Qiang Liu}
+        \resumeItem{Honors: National Scholarship for Graduate Students (2024); USTC First-Class Academic Scholarship (2022--2025, three consecutive years)}
       \resumeItemListEnd
 
     \resumeSubheading
-      {上海交通大学}{上海, 中国}
-      {计算机科学与技术 \quad 工学学士}{2018 -- 2022}
+      {Shanghai Jiao Tong University (SJTU)}{Shanghai, China}
+      {B.Eng. in Computer Science and Technology}{2018 -- 2022}
       \resumeItemListStart
-        \resumeItem{荣誉：国家励志奖学金（2019--2022）、上海交通大学学业奖学金}
+        \resumeItem{Honors: National Encouragement Scholarship (2019--2022); SJTU Academic Scholarship}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 %----------PUBLICATIONS----------
-\section{论文发表}
+\section{Publications}
 
-\textbf{\color{primary} $\blacktriangleright$ \quad 一作论文}
+\textbf{\color{primary} $\blacktriangleright$ \quad First-Author Publications}
 \begin{enumerate}[leftmargin=0.3in, label={[\arabic*]}]
 
   \pubentry{https://arxiv.org/abs/2512.10999}{KBQA-R1: Reinforcing Large Language Models for Knowledge Base Question Answering}
   {\textbf{\underline{Xin Sun}}, Zhongqi Chen, Xing Zheng, Qiang Liu, Shu Wu, Bowen Song, Zilei Wang, Weiqiang Wang, Liang Wang}
   {ICML 2026 (CCF-A)}{}
-  {\small\color{secondary} 将知识库问答建模为多轮 MDP，模型在与 KB 的闭环交互中基于环境反馈自适应调整推理策略；提出 RRS 解决 RL 冷启动，RRGC 缓解稀疏奖励问题，在大幅提升回答准确率的同时推理效率较 MCTS 方法提升 26 倍。}
+  {\small\color{secondary} Formulates knowledge base question answering as a multi-turn MDP where models adapt their reasoning strategies through closed-loop interaction with the KB; introduces RRS for RL cold start and RRGC for sparse rewards, improving accuracy while achieving 26$\times$ higher inference efficiency than MCTS-based methods.}
 
   \pubentry{https://arxiv.org/abs/2605.29584}{GAPD: Gold-Action Policy Distillation for Agentic Reinforcement Learning in Knowledge Base Question Answering}
   {\textbf{\underline{Xin Sun}}, Zhongqi Chen, Xing Zheng, Qiang Liu, Shu Wu, Bowen Song, Zilei Wang, Weiqiang Wang, Liang Wang}
-  {EMNLP 2026 投稿中}{}
-  {\small\color{secondary} 面向 agentic KBQA 中 outcome-only RL 的稀疏监督问题，提出 gold-action-conditioned self-teacher 与 Entity-Anchor Matching，将 gold action 转化为安全对齐的 token-level policy guidance，在保持原始 GRPO 目标的同时提升训练密度与稳定性。}
+  {Under Review at EMNLP 2026}{}
+  {\small\color{secondary} Addresses sparse supervision in outcome-only RL for agentic KBQA by proposing a gold-action-conditioned self-teacher and Entity-Anchor Matching, converting gold actions into safely aligned token-level policy guidance while preserving the original GRPO objective.}
 
   \pubentry{https://arxiv.org/abs/2608.01359}{EviSD: Evidence-Conditioned Self-Distillation for Search-Augmented Agents}
   {Jianan Xie\textsuperscript{*}, \textbf{\underline{Xin Sun}}\textsuperscript{*}, Zhongqi Chen, Xing Zheng, Shu Wu, Bowen Song, Liang Wang}
-  {AAAI 2027 投稿中 \quad \href{https://arxiv.org/abs/2608.01359}{arXiv:2608.01359} \quad \textsuperscript{*}共同第一作者}{}
-  {\small\color{secondary} 提出 evidence-conditioned self-distillation，以 supporting evidence 与 golden answer 作为 action-level credit assignment 的特权信息；在 7 个 QA benchmark 上取得最高 macro-average EM，且仅调制 6.7\%--15.1\% 的响应 token。}
+  {Under Review at AAAI 2027 \quad \href{https://arxiv.org/abs/2608.01359}{arXiv:2608.01359} \quad \textsuperscript{*}Equal contribution}{}
+  {\small\color{secondary} Proposes evidence-conditioned self-distillation that uses supporting evidence and golden answers as privileged information for action-level credit assignment, achieving the best macro-average EM across seven QA benchmarks while modulating only 6.7\%--15.1\% of response tokens.}
 
   \pubentry{https://arxiv.org/abs/2608.01358}{HopRefusalBench: Diagnosing Refusal Failures in Search-Augmented Agents for Multi-Hop Reasoning}
   {Jianan Xie\textsuperscript{*}, \textbf{\underline{Xin Sun}}\textsuperscript{*}, Zhongqi Chen, Xing Zheng, Qiang Liu, Bowen Song}
-  {AAAI 2027 投稿中 \quad \href{https://arxiv.org/abs/2608.01358}{arXiv:2608.01358} \quad \textsuperscript{*}共同第一作者}{}
-  {\small\color{secondary} 构建 889 题多跳拒答评测基准，交叉覆盖 3 类不可回答原因与 root/middle/terminal 拓扑；评测 10 个前沿模型，最优模型的 target-aware correct halting rate 仅 42.9\%，暴露出持续的幻觉回答与搜索预算耗尽问题。}
+  {Under Review at AAAI 2027 \quad \href{https://arxiv.org/abs/2608.01358}{arXiv:2608.01358} \quad \textsuperscript{*}Equal contribution}{}
+  {\small\color{secondary} Introduces an 889-question benchmark crossing three causes of unanswerability with root, middle, and terminal topologies; evaluation of ten frontier models finds a best target-aware correct halting rate of only 42.9\%, exposing persistent hallucination and search-budget exhaustion.}
 
   \pubentry{https://aclanthology.org/2025.acl-long.561/}{Divide-Then-Align: Honest Alignment based on the Knowledge Boundary of RAG}
   {\textbf{\underline{Xin Sun}}, Jianan Xie, Zhongqi Chen, Qiang Liu, Shu Wu, Yuehe Chen, Bowen Song, Zilei Wang, Weiqiang Wang, Liang Wang}
   {ACL 2025, Main Conference (CCF-A)}{}
-  {\small\color{secondary} 定义 RAG 的四象限知识边界（参数知识 $\cup$ 检索知识），为各象限构造差异化偏好数据，通过 DPO+SFT+分类辅助多目标训练实现诚实对齐，使模型学会在知识不足时拒答。}
+  {\small\color{secondary} Defines a four-quadrant knowledge boundary for RAG based on parametric and retrieved knowledge, constructs quadrant-specific preference data, and performs honest alignment with DPO, SFT, and auxiliary classification objectives to teach models to refuse when knowledge is insufficient.}
 
   \pubentry{https://arxiv.org/abs/2601.11443}{Predict the Retrieval! Test Time Adaptation for Retrieval Augmented Generation}
   {\textbf{\underline{Xin Sun}}, Zhongqi Chen, Qiang Liu, Shu Wu, Bowen Song, Weiqiang Wang, Zilei Wang, Liang Wang}
   {ICASSP 2026 (CCF-B)}{}
-  {\small\color{secondary} 将检索文档拆分为 prefix-suffix 对构造自监督目标，在推理时动态更新模型参数以适应目标领域，无需标注数据即可显著提升 RAG 在专业领域的性能。}
+  {\small\color{secondary} Constructs self-supervised prefix-suffix prediction tasks from retrieved documents and dynamically updates model parameters at inference time, enabling RAG systems to adapt to specialized domains without labeled data.}
 
   \pubentry{https://arxiv.org/abs/2408.04400}{DIVE: Subgraph Disagreement for Graph Out-of-Distribution Generalization}
   {\textbf{\underline{Xin Sun}}, Liang Wang, Qiang Liu, Shu Wu, Zilei Wang, Liang Wang}
   {KDD 2024 (CCF-A)}{}
-  {\small\color{secondary} 通过子图不一致性学习环境不变的图表征，解决图神经网络在分布外数据上的泛化问题。}
+  {\small\color{secondary} Learns environment-invariant graph representations via subgraph disagreement, improving graph neural network generalization under distribution shifts.}
 
   \pubentry{https://aclanthology.org/2023.findings-emnlp.876/}{Noise-Robust Semi-Supervised Learning for Distant Supervision Relation Extraction}
   {\textbf{\underline{Xin Sun}}, Qiang Liu, Shu Wu, Zilei Wang, Liang Wang}
   {EMNLP 2023, Findings (CCF-B)}{}
-  {\small\color{secondary} 利用噪声鲁棒的半监督学习方法改进远程监督关系抽取中的噪声标签问题。}
+  {\small\color{secondary} Improves distant supervision relation extraction by designing a noise-robust semi-supervised learning framework for noisy labels.}
 
   \pubentry{https://arxiv.org/abs/2303.12973}{Uncertainty Calibration for Counterfactual Propensity Estimation in Recommendation}
   {Wenbo Hu*, \textbf{\underline{Xin Sun}}*, Qiang Liu, Liang Wang}
   {IEEE TKDE (CCF-A, SCI Q1)}{}
-  {\small\color{secondary} 通过不确定性校准改进反事实倾向估计，提升推荐系统转化率预估的准确性与鲁棒性。}
+  {\small\color{secondary} Improves counterfactual propensity estimation for recommendation through uncertainty calibration, enhancing conversion-rate prediction accuracy and robustness.}
 
 \end{enumerate}
 
 \vspace{2pt}
-\textbf{\color{primary} $\blacktriangleright$ \quad 合作论文}
+\textbf{\color{primary} $\blacktriangleright$ \quad Co-authored Publications}
 \begin{enumerate}[leftmargin=0.3in, label={[\arabic*]}, resume]
 
   \pubentry{https://arxiv.org/abs/2601.21947}{ToolWeaver: Weaving Collaborative Semantics for Scalable Tool Use in Large Language Models}
   {Bowen Fang, Qiang Liu, Yesheng Liu, Jiabing Yang, \textbf{\underline{Xin Sun}}, Shu Wu, Baole Wei, Liang Wang}
   {ICLR 2026 (CAAI-A)}{}
-  {\small\color{secondary} 通过协作语义编织实现 LLM 面对大规模工具集时的可扩展工具选择与组合。}
+  {\small\color{secondary} Enables scalable tool selection and composition for LLMs by weaving collaborative semantics over large tool sets.}
 
   \pubentry{https://arxiv.org/abs/2603.00511}{Multimodal Adaptive Retrieval Augmented Generation through Internal Representation Learning}
   {Ruoshuang Du, \textbf{\underline{Xin Sun}}, Qiang Liu, Bowen Song, Zhongqi Chen, Weiqiang Wang, Liang Wang}
   {IJCNN 2026 (CCF-C)}{}
-  {\small\color{secondary} 通过内部表征学习实现多模态场景下的自适应检索增强生成。}
+  {\small\color{secondary} Enables adaptive retrieval-augmented generation in multimodal settings through internal representation learning.}
 
   \pubentry{https://proceedings.neurips.cc/paper_files/paper/2024/hash/82a9fb94035dad3ec007de4ad13c6748-Abstract-Conference.html}{Pin-Tuning: Parameter-Efficient In-Context Tuning for Few-shot Molecular Property Prediction}
   {Liang Wang, Qiang Liu, Shaozhen Liu, \textbf{\underline{Xin Sun}}, Shu Wu, Liang Wang}
   {NeurIPS 2024 (CCF-A)}{}
-  {\small\color{secondary} 面向小样本分子属性预测的参数高效上下文微调方法。}
+  {\small\color{secondary} A parameter-efficient in-context tuning method for few-shot molecular property prediction.}
 
   \pubentry{https://proceedings.neurips.cc/paper_files/paper/2023/hash/60bc87f3cf5257579435d92ec12c761b-Abstract-Datasets_and_Benchmarks.html}{GSLB: The Graph Structure Learning Benchmark}
   {Zhixun Li, Liang Wang, \textbf{\underline{Xin Sun}}, Yifan Luo, Yanqiao Zhu, Dingshuo Chen, Yingtao Luo, Xiangxin Zhou, Qiang Liu, Shu Wu, Liang Wang, Jeffrey Xu Yu}
   {NeurIPS 2023 (CCF-A)}{}
-  {\small\color{secondary} 首个综合性图结构学习评测基准，集成 16 种 GSL 算法和 20 种图数据集。}
+  {\small\color{secondary} The first comprehensive graph structure learning benchmark, integrating 16 GSL algorithms and 20 graph datasets.}
 
 \end{enumerate}
 
 %----------EXPERIENCE----------
-\section{实习经历}
+\section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {蚂蚁集团}{杭州, 中国}
-      {机器智能部门 -- 蚂蚁星实习生（2026.05 起）}{2024.11 -- 至今}
+      {Ant Group}{Hangzhou, China}
+      {Machine Intelligence Division -- Ant Star Intern (since May 2026)}{Nov. 2024 -- Present}
       \resumeItemListStart
-        \resumeItem{构建可信 RAG (Trustworthy RAG) 体系：主导完成多项检索增强生成相关工作，包括 RAG 可信对齐 (ACL 2025)、多模态自适应 RAG (IJCNN 2026)、RAG 测试时自适应 (ICASSP 2026)、知识库问答强化学习 KBQA-R1 (ICML 2026)、搜索智能体细粒度 credit assignment 与多跳拒答可靠性评测 (AAAI 2027 投稿中) 等}
+        \resumeItem{Built a Trustworthy RAG research line and led multiple retrieval-augmented generation projects, including honest alignment for RAG (ACL 2025), multimodal adaptive RAG (IJCNN 2026), test-time adaptation for RAG (ICASSP 2026), reinforcement learning for KBQA with KBQA-R1 (ICML 2026), fine-grained credit assignment for search agents, and multi-hop refusal reliability evaluation (AAAI 2027 under review).}
       \resumeItemListEnd
 
     \resumeSubheading
-      {字节跳动}{北京, 中国}
-      {AML -- 机器学习工程师实习生}{2022.02 -- 2022.08}
+      {ByteDance}{Beijing, China}
+      {AML -- Machine Learning Engineer Intern}{Feb. 2022 -- Aug. 2022}
       \resumeItemListStart
-        \resumeItem{参与多变量时间序列自动机器学习平台的开发}
-        \resumeItem{推荐系统因果推断研究：提出反事实倾向估计的不确定性校准方法，发表于 IEEE TKDE (CCF-A)}
+        \resumeItem{Contributed to the development of an AutoML platform for multivariate time-series forecasting.}
+        \resumeItem{Conducted research on causal inference for recommendation systems and proposed an uncertainty calibration method for counterfactual propensity estimation, later published in IEEE TKDE (CCF-A).}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-%----------HOBBIES----------
-\section{兴趣爱好}
-羽毛球（自评三级）\quad 滑雪（愚昧之巅）\quad 足球（巴萨死忠）\quad 桌游（卡坦岛、宝石、阿瓦隆、花砖、Poker$\cdots$）
+%----------PERSONAL INTERESTS----------
+\section{Personal Interests}
+Badminton \quad Skiing \quad Football (FC Barcelona) \quad Board Games
 
 %----------SERVICE----------
-\section{学术服务}
+\section{Academic Service}
 \begin{itemize}[leftmargin=0.15in, label={}, nosep]
-  \item \textbf{会议审稿人：} ICML 2026, NeurIPS 2025, ACL 2025, EMNLP 2025, KDD 2024
+  \item \textbf{Reviewer:} ICML 2026, NeurIPS 2025, ACL 2025, EMNLP 2025, KDD 2024
 \end{itemize}
 
 %-------------------------------------------

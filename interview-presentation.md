@@ -11,7 +11,7 @@
 - **RAG & Deep Search**：构建可靠、自适应的检索增强系统，使模型知道何时检索、检索什么、如何检索，迈向自主深度研究智能体
 - **LLM Agent Training**：通过强化学习与后训练赋予大模型智能体多轮探索、工具调用、结构化推理及环境反馈学习等能力
 
-博士期间以第一作者发表/投稿 CCF-A 类论文多篇（KDD、ACL、ICML），获研究生国家奖学金（2024）、连续三年校一等学业奖学金。在蚂蚁集团机器智能部门有近一年半的研究实习经历。
+博士期间以第一作者或共同第一作者发表/投稿论文 9 篇，包括 ICML、KDD、ACL、EMNLP，以及 2 篇 AAAI 2027 投稿；获研究生国家奖学金（2024）、连续三年校一等学业奖学金。目前在蚂蚁集团机器智能部门持续开展研究实习。
 
 ---
 
@@ -19,16 +19,19 @@
 
 | # | 论文 | 会议/期刊 | 身份 | 方向 |
 |---|------|-----------|------|------|
-| 1 | KBQA-R1: Reinforcing LLMs for Knowledge Base Question Answering | ICML 2026（投稿中，4/4/4/5 全正分） | 一作 | Agent RL |
-| 2 | Divide-Then-Align: Honest Alignment based on the Knowledge Boundary of RAG | ACL 2025 Main | 一作 | RAG 可信对齐 |
-| 3 | Predict the Retrieval! Test Time Adaptation for RAG | ICASSP 2026 | 一作 | RAG 自适应 |
-| 4 | ToolWeaver: Weaving Collaborative Semantics for Scalable Tool Use | ICLR 2026 | 合作 | Agent 工具调用 |
-| 5 | Multimodal Adaptive RAG through Internal Representation Learning | IJCNN 2026 | 合作（共一） | 多模态 RAG |
-| 6 | DIVE: Subgraph Disagreement for Graph OOD Generalization | KDD 2024 | 一作 | 图学习 |
-| 7 | Noise-Robust Semi-Supervised Learning for Distant Supervision RE | EMNLP 2023 Findings | 一作 | 可信 ML |
-| 8 | Uncertainty Calibration for Counterfactual Propensity Estimation | IEEE TKDE | 共一 | 可信 ML |
-| 9 | Pin-Tuning: Parameter-Efficient In-Context Tuning | NeurIPS 2024 | 合作 | 分子属性预测 |
-| 10 | GSLB: The Graph Structure Learning Benchmark | NeurIPS 2023 | 合作 | 图学习基准 |
+| 1 | KBQA-R1: Reinforcing LLMs for Knowledge Base Question Answering | ICML 2026（CCF-A） | 一作 | Agent RL |
+| 2 | GAPD | EMNLP 2026 | 一作 | RAG / Agent |
+| 3 | EviSD: Evidence-Conditioned Self-Distillation for Search-Augmented Agents | AAAI 2027 投稿，arXiv:2608.01359 | 共同一作 | Search Agent |
+| 4 | HopRefusalBench: Diagnosing Refusal Failures in Search-Augmented Agents for Multi-Hop Reasoning | AAAI 2027 投稿，arXiv:2608.01358 | 共同一作 | Search Agent 评测 |
+| 5 | Divide-Then-Align: Honest Alignment based on the Knowledge Boundary of RAG | ACL 2025 Main | 一作 | RAG 可信对齐 |
+| 6 | Predict the Retrieval! Test Time Adaptation for RAG | ICASSP 2026 | 一作 | RAG 自适应 |
+| 7 | DIVE: Subgraph Disagreement for Graph OOD Generalization | KDD 2024 | 一作 | 图学习 |
+| 8 | Noise-Robust Semi-Supervised Learning for Distant Supervision RE | EMNLP 2023 Findings | 一作 | 可信 ML |
+| 9 | Uncertainty Calibration for Counterfactual Propensity Estimation | IEEE TKDE | 共一 | 可信 ML |
+| 10 | ToolWeaver: Weaving Collaborative Semantics for Scalable Tool Use | ICLR 2026 | 合作 | Agent 工具调用 |
+| 11 | Multimodal Adaptive RAG through Internal Representation Learning | IJCNN 2026 | 合作 | 多模态 RAG |
+| 12 | Pin-Tuning: Parameter-Efficient In-Context Tuning | NeurIPS 2024 | 合作 | 分子属性预测 |
+| 13 | GSLB: The Graph Structure Learning Benchmark | NeurIPS 2023 | 合作 | 图学习基准 |
 
 ---
 
@@ -60,7 +63,7 @@ RAG 系统面临一个核心矛盾：当检索到的外部知识与模型内部�
 
 ---
 
-## 四、代表性工作二：KBQA-R1（投稿 ICML 2026）
+## 四、代表性工作二：KBQA-R1（ICML 2026，CCF-A）
 
 ### 问题背景
 
@@ -78,7 +81,7 @@ RAG 系统面临一个核心矛盾：当检索到的外部知识与模型内部�
 
 - 将 RL（强化学习）成功应用于结构化知识推理任务
 - 模型学会了自主的 trial-and-error 探索能力
-- 审稿得分 4/4/4/5（全正分），表明方法得到了认可
+- 已被 ICML 2026 录用（CCF-A）
 
 ### 意义
 
@@ -106,19 +109,24 @@ RAG 系统面临一个核心矛盾：当检索到的外部知识与模型内部�
 - **方法**：通过协作语义编织实现可扩展的工具使用
 - **贡献**：合作工作，与我的 Agent 方向紧密相关
 
+### EviSD 与 HopRefusalBench（AAAI 2027 投稿，均为共同一作）
+
+- **EviSD**：证据条件自蒸馏优化搜索增强智能体，arXiv:2608.01359
+- **HopRefusalBench**：评测多跳搜索智能体的拒答失败，包含 889 道题、10 个前沿模型，最优 TCHR 为 42.9%，arXiv:2608.01358
+
 ---
 
 ## 六、实习经历
 
-### 蚂蚁集团 | 机器智能部门 | 算法研究实习生（2024.11 — 2026.04）
+### 蚂蚁集团 | 机器智能部门 | 算法研究实习生（2024.11 — 至今）
 
-- 主导完成多项 RAG 核心方向研究，产出多篇论文
+- 主导完成 RAG / Agent 核心方向研究，产出 6 篇论文
 - 具体工作包括：
   - RAG 可信对齐（ACL 2025）
   - 多模态自适应 RAG（IJCNN 2026）
   - RAG 测试时自适应（ICASSP 2026）
-  - 知识库问答强化学习 KBQA-R1（投稿 ICML 2026）
-- 深入参与工业级 RAG 系统的研发，理解学术与工业的结合
+  - 知识库问答强化学习 KBQA-R1（ICML 2026，CCF-A）
+  - EviSD、HopRefusalBench（AAAI 2027 投稿，均为共同一作）
 
 ### 字节跳动 | AML | 机器学习工程师实习生（2022.02 — 2022.08）
 
