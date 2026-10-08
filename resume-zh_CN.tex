@@ -133,8 +133,8 @@
 
   \pubentry{https://arxiv.org/abs/2512.10999}{KBQA-R1: Reinforcing Large Language Models for Knowledge Base Question Answering}
   {\textbf{\underline{Xin Sun}}, Zhongqi Chen, Xing Zheng, Qiang Liu, Shu Wu, Bowen Song, Zilei Wang, Weiqiang Wang, Liang Wang}
-  {ICML 2026 (CCF-A)}{}
-  {\small\color{secondary} 将知识库问答建模为多轮 MDP，模型在与 KB 的闭环交互中基于环境反馈自适应调整推理策略；提出 RRS 解决 RL 冷启动，RRGC 缓解稀疏奖励问题，在大幅提升回答准确率的同时推理效率较 MCTS 方法提升 26 倍。}
+  {ICML 2026 (CCF-A)}{\href{https://mp.weixin.qq.com/s/ZydIkuX27NxSTOKCQTU_vw}{公众号解读}\quad}
+  {\small\color{secondary} 构建面向知识库问答的自主探索 Agent，通过 Agent RL 学习基于环境反馈的知识检索与推理策略；提出 RRS 解决 RL 冷启动，RRGC 缓解稀疏奖励问题，在大幅提升回答准确率的同时推理效率较 MCTS 方法提升 26 倍。}
 
   \pubentry{https://arxiv.org/abs/2605.29584}{GAPD: Gold-Action Policy Distillation for Agentic Reinforcement Learning in Knowledge Base Question Answering}
   {\textbf{\underline{Xin Sun}}, Zhongqi Chen, Xing Zheng, Qiang Liu, Shu Wu, Bowen Song, Zilei Wang, Weiqiang Wang, Liang Wang}
@@ -143,7 +143,7 @@
 
   \pubentry{https://aclanthology.org/2025.acl-long.561/}{Divide-Then-Align: Honest Alignment based on the Knowledge Boundary of RAG}
   {\textbf{\underline{Xin Sun}}, Jianan Xie, Zhongqi Chen, Qiang Liu, Shu Wu, Yuehe Chen, Bowen Song, Zilei Wang, Weiqiang Wang, Liang Wang}
-  {ACL 2025, Main Conference (CCF-A)}{}
+  {ACL 2025, Main Conference (CCF-A)}{\href{https://mp.weixin.qq.com/s/bBKgZvC7Gnj-v3RNBCzBXw}{公众号解读}\quad}
   {\small\color{secondary} 定义 RAG 的四象限知识边界（参数知识 $\cup$ 检索知识），为各象限构造差异化偏好数据，通过 DPO+SFT+分类辅助多目标训练实现诚实对齐，使模型学会在知识不足时拒答。}
 
   \pubentry{https://arxiv.org/abs/2608.01359}{EviSD: Evidence-Conditioned Self-Distillation for Search-Augmented Agents}
@@ -211,8 +211,8 @@
       {蚂蚁集团}{杭州, 中国}
       {机器智能部门 -- 蚂蚁星实习生（2026.05 起）}{2024.11 -- 至今}
       \resumeItemListStart
-        \resumeItem{构建可信 RAG (Trustworthy RAG) 体系：主导完成多项检索增强生成相关工作，包括 RAG 可信对齐 (ACL 2025)、多模态自适应 RAG (IJCNN 2026)、RAG 测试时自适应 (ICASSP 2026)、知识库问答强化学习 KBQA-R1 (ICML 2026)、搜索智能体细粒度 credit assignment 与多跳拒答可靠性评测 (AAAI 2027 投稿中) 等}
-        \resumeItem{训练 27B agentic jailbreak RL attack policy：在 Qwen3.5-122B 的 HarmBench core200 上，ASR@3 从强化前历史参考 28.0\% 提升至 95.5\%（不同 harness，仅作趋势对比）；单轮直送 baseline 在 HarmBench、JailbreakBench、StrongREJECT 与 4 个 victim 上宏平均为 1.2\%。RL policy 迁移至 3 个未见 victim（Ling-3.0-Flash、GLM-5.2、Kimi-K2.6）后分别达到 98.5\%、98.5\%、97.0\% ASR@3；在聚焦中文底线风险的 AntEval200 上，4 个 victim 的 ASR@3 为 57.0\% 至 63.0\%，宏平均 61.0\%}
+        \resumeItem{构建可信 RAG (Trustworthy RAG) 体系：主导完成多项检索增强生成相关工作，包括 RAG 可信对齐 (ACL 2025)、多模态自适应 RAG (IJCNN 2026)、RAG 测试时自适应 (ICASSP 2026)、知识库问答 Agent 强化学习 KBQA-R1 (ICML 2026)、搜索智能体细粒度 credit assignment 与多跳拒答可靠性评测 (AAAI 2027 投稿中) 等}
+        \resumeItem{\textbf{MOSA Harness：}设计融合技能先验、多会话管理与跨会话记忆的自适应多轮攻击框架；在 Train-free 场景下，对 Qwen3.5-122B 的 HarmBench 攻击成功率 ASR@3 达到 \textbf{70.5\%}，较 Crescendo 提升 \textbf{11.0 个百分点}；进一步基于 GRPO 后训练 27B 攻击模型，仅在 Qwen3.5-122B 上进行交互训练；双语模型在 HarmBench 四个 Victim 上的宏平均 ASR@3 达到 \textbf{97.4\%}，较同规模 Train-free 提升 \textbf{37.5 个百分点}，在 GLM、Kimi、Ling 上达到 \textbf{97.0\%--98.5\%}}
       \resumeItemListEnd
 
     \resumeSubheading
