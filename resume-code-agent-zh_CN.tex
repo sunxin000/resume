@@ -6,7 +6,7 @@
 
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage[UTF8,fontset=none]{ctex}
+\usepackage[UTF8,fontset=none,linespread=1.24]{ctex}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -14,6 +14,7 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
+\usepackage{needspace}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{tabularx}
@@ -28,6 +29,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot{}
+\setlength{\footskip}{4.1pt}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -73,6 +75,7 @@
 
 % Publication entry
 \newcommand{\pubentry}[4]{
+  \Needspace{5\baselineskip}
   \item \textbf{#1} \\
   {\small #2} \\
   {\small \textit{#3}\hfill #4}
@@ -91,7 +94,12 @@
   \small \faGraduationCap\ \href{https://scholar.google.com/citations?user=x2aQKE4AAAAJ}{Google Scholar} \;\; \faGithub\ \href{https://github.com/sunxin000}{GitHub}
 \end{tabular*}
 \vspace{-6pt}
-{\color{primary}\rule{\textwidth}{1.5pt}}
+{\setlength{\fboxsep}{4pt}%
+\colorbox{primary!7}{\makebox[\dimexpr\textwidth-2\fboxsep\relax][c]{%
+  \rule[-3pt]{0pt}{16pt}%
+  \href{https://sunxin000.github.io/}{\color{primary}\large\bfseries
+    \faGlobe\enspace 个人主页\quad\underline{sunxin000.github.io}}%
+}}}
 
 %----------RESEARCH INTERESTS----------
 \section{研究方向}
@@ -109,7 +117,7 @@
       \resumeItemListStart
         \resumeItem{中国科学院自动化研究所模式识别国家重点实验室 (NLPR)}
         \resumeItem{导师：王亮 教授（IEEE Fellow）、刘强 副研究员}
-        \resumeItem{荣誉：比亚迪博士奖学金（2026.10）、国家奖学金（2024）、中国科学技术大学一等学业奖学金（2022--2025, 连续三年）}
+        \resumeItem{荣誉：比亚迪博士奖学金（2026.10）、国家奖学金（2024）、中国科学技术大学一等学业奖学金（2022--2026, 连续四年）}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -124,7 +132,7 @@
 \section{论文发表}
 
 \textbf{\color{primary} $\blacktriangleright$ \quad 一作论文}
-\begin{enumerate}[leftmargin=0.3in, label={[\arabic*]}]
+\begin{enumerate}[leftmargin=0.3in, label={[\arabic*]}, itemsep=4pt, parsep=0pt, topsep=4pt]
 
   \pubentry{KBQA-R1: Reinforcing Large Language Models for Knowledge Base Question Answering}
   {\textbf{\underline{Xin Sun}}, Zhongqi Chen, Xing Zheng, Qiang Liu, Shu Wu, Bowen Song, Zilei Wang, Weiqiang Wang, Liang Wang}
@@ -165,7 +173,7 @@
 
 \vspace{2pt}
 \textbf{\color{primary} $\blacktriangleright$ \quad 合作论文}
-\begin{enumerate}[leftmargin=0.3in, label={[\arabic*]}, resume]
+\begin{enumerate}[leftmargin=0.3in, label={[\arabic*]}, resume, itemsep=4pt, parsep=0pt, topsep=4pt]
 
   \pubentry{ToolWeaver: Weaving Collaborative Semantics for Scalable Tool Use in Large Language Models}
   {Bowen Fang, Qiang Liu, Yesheng Liu, Jiabing Yang, \textbf{\underline{Xin Sun}}, Shu Wu, Baole Wei, Liang Wang}
